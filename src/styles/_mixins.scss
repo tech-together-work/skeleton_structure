@@ -1,0 +1,43 @@
+$screens: (
+  mobile: 576px,
+  tablet: 768px,
+  laptop: 1024px,
+  desktop: 1440px,
+  fourk: 1441px,
+  smallDesktop: 1199px,
+);
+
+@mixin mobile {
+  @media (max-width: map-get($screens, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: map-get($screens, tablet)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: map-get($screens, laptop)) {
+    @content;
+  }
+}
+
+@mixin midlaptop {
+  @media (max-width: #{map-get($screens, laptop) - 1}) {
+    @content;
+  }
+}
+@mixin smallDesktop {
+  @media (max-width: #{map-get($screens, smallDesktop)}) {
+    @content;
+  }
+}
+
+@mixin fourk {
+  @media (min-width: map-get($screens, fourk)) {
+    @content;
+  }
+}
