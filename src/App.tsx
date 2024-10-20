@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Suspense fallback={'Loading...'}>
       <PageLayout>
-        <RouterProvider router={router} />;
+        <RouterProvider router={router} />
       </PageLayout>
     </Suspense>
   );
