@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className={styles.bg}>
-      <h2>Swagatam!!!</h2>
+      <h2>Swagatam!</h2>
       <button onClick={increaseCounter}>Add</button>
       <h3> {counterValue.value}</h3>
       <button onClick={decreaseCounter}>Subtract</button>
