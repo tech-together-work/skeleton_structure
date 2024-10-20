@@ -1,6 +1,6 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import styles from "./PageLayout.module.scss";
+import styles from './PageLayout.module.scss';
 
 export interface PageLayoutProps {
   children?: React.ReactNode;
