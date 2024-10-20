@@ -1,5 +1,6 @@
 .bg {
-  background-color: red;
+  background-color: black;
+  height: 100px;
   @include tablet {
     background-color: green;
   }
