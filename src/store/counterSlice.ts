@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 // Define the type for the state
 interface CounterState {
@@ -10,7 +10,7 @@ const initialState: CounterState = {
   value: 0,
 };
 const counterSlice = createSlice({
-  name: "counter",
+  name: 'counter',
   initialState: initialState,
   reducers: {
     increment: (state) => {
