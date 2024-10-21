@@ -1,0 +1,45 @@
+.button {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 19.2px;
+  @include semibold;
+  border: 1px solid var(--color-primary);
+  min-height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-offwhite);
+  padding: 0 38px;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--color-primary);
+  }
+  @include tablet {
+    padding: 0 22px;
+  }
+
+  &.white {
+    background-color: var(--color-offwhite);
+    color: var(--color-primary);
+    border: 1px solid var(--color-offwhite);
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: var(--color-primary);
+  }
+  &.outlinedWhite {
+    border: 1px solid var(--color-offwhite);
+    color: var(--color-offwhite);
+    background-color: transparent;
+  }
+  &.outlinedBlack {
+    background-color: transparent;
+    border: 1px solid var(--neutral-900);
+    color: var(--neutral-900);
+  }
+}

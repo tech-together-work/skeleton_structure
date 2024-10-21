@@ -7,6 +7,7 @@ import { P, Text } from '../Text/Text';
 import { ColorsEnum } from '../../../enums/ColorsEnum';
 import logo from '../../../assets/images/logo.svg';
 import { RoutesEnum } from '../../../enums/RouteEnums';
+import Button from '../Button/Button';
 
 const Header = () => {
   return (
@@ -33,7 +34,10 @@ const Header = () => {
             </Link>
           </Flex>
           <Flex justifyContent="flex-end" alignItems="center" gap="24px">
-            Buttons
+            <Button variant="outlined-black">Craft a Trip</Button>
+            <Link to={RoutesEnum.CONTACT}>
+              <Button>Contact Us</Button>
+            </Link>
           </Flex>
         </div>
       </Section>
