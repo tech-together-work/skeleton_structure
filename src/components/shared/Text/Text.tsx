@@ -2,11 +2,13 @@ import clsx from 'clsx';
 import React from 'react';
 
 import styles from './Text.module.scss';
+import { ColorsEnum } from '../../../enums/ColorsEnum';
 
 export interface TextProps {
   children?: React.ReactNode;
   className?: string;
   fontWeight?: 'regular' | 'medium' | 'semibold' | 'bold';
+  color?: ColorsEnum;
 }
 export interface CustomTextProps {
   fontSize: number;
@@ -15,14 +17,17 @@ export interface CustomTextProps {
   onClick?: () => void;
   fontWeight?: 'regular' | 'medium' | 'semibold' | 'bold';
   variant?: keyof JSX.IntrinsicElements;
+  color?: ColorsEnum;
 }
 export const H1: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'bold',
+  color,
 }) => {
   return (
     <h1
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.heading,
         styles.h1,
@@ -44,9 +49,11 @@ export const H2: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'bold',
+  color,
 }) => {
   return (
     <h2
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.heading,
         styles.h2,
@@ -68,9 +75,11 @@ export const H3: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'semibold',
+  color,
 }) => {
   return (
     <h3
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.heading,
         styles.h3,
@@ -92,9 +101,11 @@ export const H4: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'semibold',
+  color,
 }) => {
   return (
     <h4
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.heading,
         styles.h4,
@@ -116,9 +127,11 @@ export const H5: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'bold',
+  color,
 }) => {
   return (
     <h5
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.heading,
         styles.h5,
@@ -140,9 +153,11 @@ export const H6: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'semibold',
+  color,
 }) => {
   return (
     <h6
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.heading,
         styles.h6,
@@ -164,9 +179,11 @@ export const P: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'semibold',
+  color,
 }) => {
   return (
     <p
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.text,
         styles.p,
@@ -188,9 +205,11 @@ export const Span: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'regular',
+  color,
 }) => {
   return (
     <span
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.text,
         styles.span,
@@ -212,9 +231,11 @@ export const Strong: React.FC<TextProps> = ({
   children,
   className,
   fontWeight = 'bold',
+  color,
 }) => {
   return (
     <strong
+      style={{ color: `var(${color})` }}
       className={clsx(
         styles.text,
         styles.strong,
@@ -240,11 +261,12 @@ export const Text: React.FC<CustomTextProps> = ({
   onClick,
   fontWeight = 'regular',
   variant = 'p',
+  color,
 }) => {
   const Component = variant;
   return (
     <Component
-      style={{ fontSize: `${fontSize}px` }}
+      style={{ fontSize: `${fontSize}px`, color: `var(${color})` }}
       onClick={onClick}
       className={clsx(
         {
