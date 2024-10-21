@@ -1,7 +1,23 @@
 :root {
-  //Global colors
   --color-black: #000000;
   --color-white: #ffffff;
+
+  // Main colors
+  --color-primary: #ff5521;
+  --color-secondary: #402e29;
+  --color-tertiary: #bd957a;
+  --color-offwhite: #fdf9f6;
+
+  //Neutrals
+  --neutral-50: #f0f0ef;
+  --neutral-100: #cfcfce;
+  --neutral-200: #b8b8b7;
+  --neutral-300: #989796;
+  --neutral-400: #848381;
+  --neutral-500: #656462;
+  --neutral-600: #5c5b59;
+  --neutral-700: #484746;
+  --neutral-800: #383736;
 }
 
 * {
