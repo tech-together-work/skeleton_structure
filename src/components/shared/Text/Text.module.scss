@@ -2,6 +2,10 @@
   font-size: 56px;
   font-weight: normal;
   line-height: 72.8px;
+  @include tablet {
+    font-size: 32px;
+    line-height: 44.8px;
+  }
 }
 .h2 {
   font-size: 48px;

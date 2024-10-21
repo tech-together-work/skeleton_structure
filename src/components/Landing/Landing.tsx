@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
 import styles from './Landing.module.scss';
 import { H1 } from '../shared/Text/Text';
-import { ColorsEnum } from '../../enums/ColorsEnum';
+import Section from '../shared/Section/Section';
 
 const Landing = () => {
   return (
     <div className={styles.home}>
-      <Link to={'/about'}>
-        <H1 className={styles.h1} color={ColorsEnum.Neutral700}>
-          Click to navigate
+      <Section>
+        <H1 className={styles.pageHeading}>
+          Crafting Extraordinary Travel Journeys Since 1986
         </H1>
-      </Link>
+      </Section>
     </div>
   );
 };

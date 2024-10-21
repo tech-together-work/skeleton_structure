@@ -1,6 +1,8 @@
 .home {
-  color: var(--color-primary);
-  @include tablet {
-    color: green;
+  .pageHeading {
+    max-width: 778px;
+    text-align: center;
+    padding: 64px 16px;
+    margin: 0 auto;
   }
 }
