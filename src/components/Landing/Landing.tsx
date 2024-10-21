@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Landing.module.scss';
-import { H1, P } from '../shared/Text/Text';
+import { H1 } from '../shared/Text/Text';
 import logo from '../../assets/images/logo.svg';
 
 const Landing = () => {
