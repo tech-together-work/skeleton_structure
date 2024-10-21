@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import styles from './Landing.module.scss';
 import { H1, P } from '../shared/Text/Text';
+import logo from '../../assets/images/logo.svg';
 
 const Landing = () => {
   return (
     <div className={styles.home}>
-      <P>Landing</P>
+      <img src={logo} alt="logo" />
       <Link to={'/about'}>
-        <H1>Click me</H1>
+        <H1>Click to navigate</H1>
       </Link>
     </div>
   );
