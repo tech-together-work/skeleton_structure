@@ -15,7 +15,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "${path.resolve(__dirname, 'src/styles/_mixins.scss')}";
-           @import "${path.resolve(__dirname, 'src/styles/_fonts.scss')}";
+          @import "${path.resolve(__dirname, 'src/styles/_fonts.scss')}";
           @import "${path.resolve(__dirname, 'src/styles/_globals.scss')}";
         `,
       },

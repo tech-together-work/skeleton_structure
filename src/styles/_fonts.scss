@@ -1,41 +1,41 @@
 @font-face {
-  font-family: 'Gilroy-regular';
-  src: url('.assets/Gilroy-Regular.ttf') format('truetype');
+  font-family: 'Gilroy-Regular';
+  src: url('./public/fonts/Gilroy-Regular.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy-medium';
-  src: url('.assets/Gilroy-Medium.ttf') format('truetype');
+  font-family: 'Gilroy-Medium';
+  src: url('./public/fonts/Gilroy-Medium.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy-semibold';
-  src: url('.assets/Gilroy-SemiBold.ttf') format('truetype');
+  font-family: 'Gilroy-Semibold';
+  src: url('./public/fonts/Gilroy-SemiBold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy-bold';
-  src: url('.assets/Gilroy-Bold.ttf') format('truetype');
+  font-family: 'Gilroy-Bold';
+  src: url('./public/fonts/Gilroy-Bold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @mixin regular {
-  font-family: 'Gilroy-regular';
+  font-family: 'Gilroy-Regular';
 }
 
 @mixin medium {
-  font-family: 'Gilroy-medium';
+  font-family: 'Gilroy-Medium';
 }
 
 @mixin semibold {
-  font-family: 'Gilroy-semibold';
+  font-family: 'Gilroy-Semibold';
 }
 
 @mixin bold {
-  font-family: 'Gilroy-bold';
+  font-family: 'Gilroy-Bold';
 }
