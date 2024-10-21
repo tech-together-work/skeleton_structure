@@ -3,14 +3,16 @@ import routes from '~react-pages';
 import PageLayout from './components/shared/PageLayout/PageLayout';
 import { Suspense } from 'react';
 
-const router = createBrowserRouter(routes);
-
+const router = createBrowserRouter([
+  {
+    element: <PageLayout />,
+    children: routes,
+  },
+]);
 const App = () => {
   return (
     <Suspense fallback={'Loading...'}>
-      <PageLayout>
-        <RouterProvider router={router} />
-      </PageLayout>
+      <RouterProvider router={router} />
     </Suspense>
   );
 };

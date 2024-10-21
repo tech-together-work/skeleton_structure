@@ -274,6 +274,7 @@ export const Text: React.FC<CustomTextProps> = ({
           [styles.medium]: fontWeight === 'medium',
           [styles.semibold]: fontWeight === 'semibold',
           [styles.bold]: fontWeight === 'bold',
+          [styles.font_26]: fontSize === 26,
         },
         className
       )}

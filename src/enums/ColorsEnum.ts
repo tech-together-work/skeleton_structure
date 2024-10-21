@@ -14,4 +14,5 @@ export enum ColorsEnum {
   Neutral700 = '--neutral-700',
   Neutral800 = '--neutral-800',
   Neutral900 = '--neutral-900',
+  Black80 = '--black-80',
 }
