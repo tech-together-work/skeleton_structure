@@ -23,3 +23,19 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@mixin regular {
+  font-family: 'Gilroy-regular';
+}
+
+@mixin medium {
+  font-family: 'Gilroy-medium';
+}
+
+@mixin semibold {
+  font-family: 'Gilroy-semibold';
+}
+
+@mixin bold {
+  font-family: 'Gilroy-bold';
+}

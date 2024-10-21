@@ -1,3 +1,6 @@
 .home {
   color: var(--color-primary);
+  @include tablet {
+    color: green;
+  }
 }

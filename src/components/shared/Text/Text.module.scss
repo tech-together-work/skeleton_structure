@@ -1,0 +1,41 @@
+.h1 {
+  font-size: 56px;
+  font-weight: normal;
+}
+.h2 {
+  font-size: 48px;
+  font-weight: normal;
+}
+.h3 {
+  font-size: 32px;
+  font-weight: normal;
+}
+.h4 {
+  font-size: 28px;
+  font-weight: normal;
+}
+.h5 {
+  font-size: 24px;
+  font-weight: normal;
+}
+.h6 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.p {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.regular {
+  @include regular;
+}
+.medium {
+  @include medium;
+}
+.semibold {
+  @include semibold;
+}
+.bold {
+  @include bold;
+}
