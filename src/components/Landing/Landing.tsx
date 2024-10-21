@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from './Landing.module.scss';
-import { H1 } from '../shared/Text/Text';
+import { H1, P } from '../shared/Text/Text';
 
 const Landing = () => {
   return (
     <div className={styles.home}>
-      Landing{' '}
+      <P>Landing</P>
       <Link to={'/about'}>
         <H1>Click me</H1>
       </Link>
