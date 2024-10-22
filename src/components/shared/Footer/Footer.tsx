@@ -2,6 +2,7 @@ import Flex from '../Flex/Flex';
 import Section from '../Section/Section';
 import styles from './Footer.module.scss';
 import Newsletter from './Newsletter/Newsletter';
+import Socials from './Socials/Socials';
 
 const Footer = () => {
   return (
@@ -10,6 +11,7 @@ const Footer = () => {
         <Flex>
           <Newsletter />
         </Flex>
+        <Socials />
       </Section>
     </footer>
   );
