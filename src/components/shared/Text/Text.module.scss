@@ -26,7 +26,12 @@
 .h5 {
   font-size: 24px;
   font-weight: normal;
-  line-height: normal;
+  line-height: 31.2px;
+  @include tablet {
+    font-size: 20px;
+
+    line-height: 26px;
+  }
 }
 .h6 {
   font-size: 20px;

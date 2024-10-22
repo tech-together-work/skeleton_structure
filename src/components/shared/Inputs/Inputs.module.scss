@@ -1,0 +1,27 @@
+.inputv1 {
+  .input {
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22.4px;
+    @include medium;
+    outline: none;
+    border: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    background-color: transparent;
+    border-bottom-color: inherit;
+    color: inherit;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
