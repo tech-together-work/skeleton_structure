@@ -2,17 +2,20 @@
   display: grid;
   grid-template-columns: 25% 48% 25%;
   gap: 1%;
-  padding: 95px 0 59px 0;
+  padding: 95px 0 0px 0;
   background-color: var(--color-offwhite);
 
   @include tablet {
     grid-template-columns: repeat(1, 1fr);
     gap: 35px;
-    padding: 92px 0 25px 0;
+    padding: 92px 0 0px 0;
   }
 
   .middleWrap {
     flex: 1;
+    @include laptop {
+      gap: 16px !important;
+    }
     .link {
       text-decoration: underline;
     }
@@ -22,6 +25,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   .icons {

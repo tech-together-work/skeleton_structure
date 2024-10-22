@@ -1,0 +1,18 @@
+.innerWrap {
+  width: 100%;
+  display: flex;
+  gap: 75px !important;
+  @include tablet {
+    flex-direction: column-reverse !important;
+  }
+}
+.footer {
+  padding-top: 64px;
+  padding-bottom: 56px;
+  background-color: var(--color-offwhite);
+
+  @include tablet {
+    padding-top: 47px;
+    padding-bottom: 24px;
+  }
+}
