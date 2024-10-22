@@ -14,13 +14,17 @@ const Header = () => {
     <nav className={styles.navBar}>
       <Section className={styles.section}>
         <div className={styles.headerWrap}>
-          <Flex alignItems="center" gap="40px">
+          <Flex alignItems="center" gap="40px" className={styles.hide}>
             <Menu />
             <Link to={RoutesEnum.ABOUT}>
               <P color={ColorsEnum.Black80}>About</P>
             </Link>
           </Flex>
-          <Flex justifyContent="center" alignItems="cenetr">
+          <Flex
+            justifyContent="center"
+            alignItems="cenetr"
+            className={styles.logoWrap}
+          >
             <Link to={RoutesEnum.HOME} className={styles.logo}>
               <img src={logo} alt="logo" />
               <Text
@@ -33,7 +37,12 @@ const Header = () => {
               </Text>
             </Link>
           </Flex>
-          <Flex justifyContent="flex-end" alignItems="center" gap="24px">
+          <Flex
+            justifyContent="flex-end"
+            alignItems="center"
+            gap="24px"
+            className={styles.hide}
+          >
             <Button variant="outlined-black">Craft a Trip</Button>
             <Link to={RoutesEnum.CONTACT}>
               <Button>Contact Us</Button>

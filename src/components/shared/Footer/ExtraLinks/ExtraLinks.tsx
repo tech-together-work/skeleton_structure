@@ -17,10 +17,8 @@ const ExtraLinks = () => {
         </P>
         {resources.map((item, index) => {
           return (
-            <Link to={''} className={styles.link}>
-              <P key={index} color={ColorsEnum.Neutral900}>
-                {item}
-              </P>
+            <Link to={''} key={index} className={styles.link}>
+              <P color={ColorsEnum.Neutral900}>{item}</P>
             </Link>
           );
         })}
