@@ -1,18 +1,23 @@
 import clsx from 'clsx';
 
 import styles from './PageLayout.module.scss';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import { Outlet } from 'react-router-dom';
 
 export interface PageLayoutProps {
   children?: React.ReactNode;
   className?: string;
 }
-const PageLayout: React.FC<PageLayoutProps> = ({ children, className }) => {
+const PageLayout: React.FC<PageLayoutProps> = ({ className }) => {
   return (
-    <>
-      {/* Header */}
-      <main className={clsx(styles.main, className)}>{children}</main>
-      {/* Footer */}
-    </>
+    <div>
+      <Header />
+      <main className={clsx(styles.main, className)}>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

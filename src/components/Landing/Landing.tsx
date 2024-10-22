@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
 import styles from './Landing.module.scss';
 import { H1 } from '../shared/Text/Text';
-import logo from '../../assets/images/logo.svg';
+import Section from '../shared/Section/Section';
 
 const Landing = () => {
   return (
     <div className={styles.home}>
-      <img src={logo} alt="logo" />
-      <Link to={'/about'}>
-        <H1>Click to navigate</H1>
-      </Link>
+      <Section>
+        <H1 className={styles.pageHeading}>
+          Crafting Extraordinary Travel Journeys Since 1986
+        </H1>
+      </Section>
     </div>
   );
 };

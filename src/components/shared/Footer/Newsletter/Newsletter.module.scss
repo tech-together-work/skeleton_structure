@@ -1,0 +1,28 @@
+.newsletter {
+  padding: 25px 31px;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 808px;
+  width: 100%;
+
+  .buttonWrap {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      line-height: normal;
+    }
+  }
+
+  .heading {
+    color: var(--color-offwhite);
+  }
+}

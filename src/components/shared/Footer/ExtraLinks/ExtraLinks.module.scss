@@ -1,0 +1,32 @@
+.extraLinks {
+  width: 100%;
+  margin-top: 24px;
+
+  @include laptop {
+    flex-wrap: wrap !important;
+    row-gap: 42px !important;
+    margin-top: 0;
+  }
+
+  > div {
+    max-width: 215px;
+    flex: 1 !important;
+  }
+  .head {
+    line-height: 25.465px;
+  }
+  .link {
+    line-height: 22.4px;
+  }
+
+  .thirdWrap {
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .email {
+      margin-top: 32px;
+    }
+  }
+}

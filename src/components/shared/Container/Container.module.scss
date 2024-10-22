@@ -1,0 +1,9 @@
+.container {
+  display: block;
+  height: auto;
+
+  &.spacing {
+    padding-top: 84px;
+    padding-bottom: 64px;
+  }
+}
