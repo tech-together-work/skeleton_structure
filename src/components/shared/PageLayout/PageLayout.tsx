@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import { memo } from 'react';
 
 import styles from './PageLayout.module.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 
 export interface PageLayoutProps {
   children?: React.ReactNode;
@@ -15,11 +15,13 @@ const PageLayout: React.FC<PageLayoutProps> = ({ className }) => {
     <div>
       <Header />
       <main className={clsx(styles.main, className)}>
-        <Outlet />
+        <Suspense fallback={'Loading...'}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
     </div>
   );
 };
 
-export default memo(PageLayout);
+export default PageLayout;
