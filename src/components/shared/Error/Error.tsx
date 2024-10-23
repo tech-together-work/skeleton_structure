@@ -8,6 +8,7 @@ import { ColorsEnum } from '../../../enums/ColorsEnum';
 
 const ErrorTemplate = () => {
   const errorResponse: any = useRouteError();
+
   return (
     <Flex
       justifyContent="center"

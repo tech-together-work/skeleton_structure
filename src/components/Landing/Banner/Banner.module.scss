@@ -1,0 +1,56 @@
+.banner {
+  width: 100%;
+  padding: 25px;
+  border: 3px solid var(--color-primary);
+  position: relative;
+  height: 587px;
+
+  @include tablet {
+    padding: 16px;
+    border: 2px solid var(--color-primary);
+  }
+  @include laptop {
+    height: 515px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .disc {
+    position: absolute;
+    left: -24px;
+    top: -75px;
+
+    @include laptop {
+      left: 38px;
+      width: 110px;
+      top: -60px;
+    }
+    @include tablet {
+      left: 24px;
+    }
+  }
+  .bannerText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    p {
+      font-size: clamp(
+        32px,
+        calc(32px + (150 - 32) * ((100vw - 576px) / (1440 - 576))),
+        150px
+      ) !important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      text-transform: uppercase;
+      @include bold;
+      color: var(--color-offwhite);
+    }
+  }
+}
