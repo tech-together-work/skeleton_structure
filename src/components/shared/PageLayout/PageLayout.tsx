@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { memo } from 'react';
 
 import styles from './PageLayout.module.scss';
 import Header from '../Header/Header';
@@ -21,4 +22,4 @@ const PageLayout: React.FC<PageLayoutProps> = ({ className }) => {
   );
 };
 
-export default PageLayout;
+export default memo(PageLayout);
