@@ -5,12 +5,20 @@
   margin: 52px 0;
   gap: 16px !important;
   position: relative;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 
   @include tablet {
     justify-content: center !important;
     padding: 12px;
     margin: 38px 0;
   }
+
+  @include laptop {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   > div {
     flex: 1;
   }
@@ -40,7 +48,7 @@
     right: -22px;
     top: -22px;
 
-    @include tablet {
+    @include laptop {
       display: none;
     }
   }
