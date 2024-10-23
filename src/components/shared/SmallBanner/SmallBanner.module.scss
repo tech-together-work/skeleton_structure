@@ -1,0 +1,38 @@
+.smallBanner {
+  background-color: var(--color-primary);
+  padding: 42px 40px 42px 0;
+
+  @include tablet {
+    flex-direction: column !important;
+    gap: 27px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 30px 16px 30px 16px;
+  }
+
+  h4 {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  .firstWrap {
+    @include tablet {
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  .singleLine {
+    @include tablet {
+      display: none;
+    }
+  }
+  .doubleLine {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+}

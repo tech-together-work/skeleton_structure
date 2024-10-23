@@ -5,7 +5,12 @@ import clsx from 'clsx';
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
-  variant?: 'solid' | 'outlined' | 'outlined-white' | 'outlined-black';
+  variant?:
+    | 'solid'
+    | 'outlined'
+    | 'outlined-white'
+    | 'outlined-black'
+    | 'solid-white';
 }
 
 const Button: React.FC<Props> = ({
@@ -23,6 +28,7 @@ const Button: React.FC<Props> = ({
           [styles.outlined]: variant === 'outlined',
           [styles.outlinedWhite]: variant === 'outlined-white',
           [styles.outlinedBlack]: variant === 'outlined-black',
+          [styles.white]: variant === 'solid-white',
         },
         className
       )}

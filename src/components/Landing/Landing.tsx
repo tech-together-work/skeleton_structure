@@ -3,6 +3,8 @@ import { H1 } from '../shared/Text/Text';
 import Section from '../shared/Section/Section';
 import Banner from './Banner/Banner';
 import Metrics from './Metrics/Metrics';
+import SmallBanner from '../shared/SmallBanner/SmallBanner';
+import Container from '../shared/Container/Container';
 
 const Landing = () => {
   return (
@@ -18,6 +20,9 @@ const Landing = () => {
       <Section>
         <Metrics />
       </Section>
+      <Container spacing={false}>
+        <SmallBanner />
+      </Container>
     </div>
   );
 };

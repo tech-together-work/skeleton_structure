@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Conatiner.module.scss';
+import styles from './Container.module.scss';
 import clsx from 'clsx';
 
 export interface Props {
@@ -7,7 +7,7 @@ export interface Props {
   children: React.ReactNode;
   spacing?: boolean;
 }
-const Conatiner: React.FC<Props> = ({
+const Container: React.FC<Props> = ({
   className,
   children,
   spacing = true,
@@ -21,4 +21,4 @@ const Conatiner: React.FC<Props> = ({
   );
 };
 
-export default Conatiner;
+export default Container;
