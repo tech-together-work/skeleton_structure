@@ -2,6 +2,7 @@ import styles from './Landing.module.scss';
 import { H1 } from '../shared/Text/Text';
 import Section from '../shared/Section/Section';
 import Banner from './Banner/Banner';
+import Metrics from './Metrics/Metrics';
 
 const Landing = () => {
   return (
@@ -13,6 +14,9 @@ const Landing = () => {
       </Section>
       <Section>
         <Banner />
+      </Section>
+      <Section>
+        <Metrics />
       </Section>
     </div>
   );
