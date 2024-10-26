@@ -7,6 +7,7 @@ import SmallBanner from '../shared/common/SmallBanner/SmallBanner';
 import Container from '../shared/Container/Container';
 import DreamTour from '../shared/common/DreamTour/DreamTour';
 import Partners from './Partners/Partners';
+import Awards from './Awards/Awards';
 
 const Landing = () => {
   return (
@@ -27,6 +28,9 @@ const Landing = () => {
       </Container>
       <Section className={styles.partnersSection}>
         <Partners />
+      </Section>
+      <Section className={styles.awardsSection}>
+        <Awards />
       </Section>
       <Container className={styles.dreamTourContainer}>
         <DreamTour />
