@@ -5,4 +5,10 @@
     padding: 64px 16px;
     margin: 0 auto;
   }
+  .dreamTourContainer {
+    background-color: var(--color-tertiary);
+    @include tablet {
+      padding: 48px 0;
+    }
+  }
 }

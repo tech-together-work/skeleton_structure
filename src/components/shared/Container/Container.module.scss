@@ -5,5 +5,10 @@
   &.spacing {
     padding-top: 84px;
     padding-bottom: 64px;
+
+    @include tablet {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
   }
 }

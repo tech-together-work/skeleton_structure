@@ -3,8 +3,9 @@ import { H1 } from '../shared/Text/Text';
 import Section from '../shared/Section/Section';
 import Banner from './Banner/Banner';
 import Metrics from './Metrics/Metrics';
-import SmallBanner from '../shared/SmallBanner/SmallBanner';
+import SmallBanner from '../shared/common/SmallBanner/SmallBanner';
 import Container from '../shared/Container/Container';
+import DreamTour from '../shared/common/DreamTour/DreamTour';
 
 const Landing = () => {
   return (
@@ -22,6 +23,9 @@ const Landing = () => {
       </Section>
       <Container spacing={false}>
         <SmallBanner />
+      </Container>
+      <Container className={styles.dreamTourContainer}>
+        <DreamTour />
       </Container>
     </div>
   );

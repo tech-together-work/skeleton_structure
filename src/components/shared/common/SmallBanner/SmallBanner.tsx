@@ -1,13 +1,13 @@
-import Flex from '../Flex/Flex';
 import styles from './SmallBanner.module.scss';
-import singlestar from '../../../assets/images/singlewhitestar-line.png';
-import doubleStar from '../../../assets/images/whitestar-line.png';
+import singlestar from '../../../../assets/images/singlewhitestar-line.png';
+import doubleStar from '../../../../assets/images/whitestar-line.png';
 
-import { H4 } from '../Text/Text';
-import { ColorsEnum } from '../../../enums/ColorsEnum';
-import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
-import { RoutesEnum } from '../../../enums/RouteEnums';
+import { ColorsEnum } from '../../../../enums/ColorsEnum';
+import Button from '../../Button/Button';
+import { RoutesEnum } from '../../../../enums/RouteEnums';
+import Flex from '../../Flex/Flex';
+import { H4 } from '../../Text/Text';
 
 const SmallBanner = () => {
   return (

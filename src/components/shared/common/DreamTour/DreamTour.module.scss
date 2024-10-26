@@ -1,0 +1,85 @@
+.dreamTour {
+  display: flex;
+  .innerWrap {
+    width: 100%;
+    > div {
+      flex: 1;
+    }
+    .left {
+      gap: 54px !important;
+
+      @include tablet {
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      .heading {
+        @include tablet {
+          font-size: 26px !important;
+          font-weight: 400;
+          line-height: 31.2px;
+          letter-spacing: -0.52px;
+          text-align: center;
+          max-width: 279px;
+        }
+      }
+
+      .links {
+        @include tablet {
+          align-items: center !important;
+        }
+        .link {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+      }
+
+      .mobileImage {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+
+    .deskImage {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  > div {
+    border: 3px solid var(--neutral-900);
+    border-bottom: none;
+    max-width: 480px;
+    position: absolute;
+    bottom: -64px;
+    right: 0;
+    height: 430px;
+    overflow: hidden;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+    @include tablet {
+      border-width: 2px;
+      border-bottom: 2px solid var(--neutral-900);
+      position: relative;
+      bottom: initial;
+      right: initial;
+      height: 300px;
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
