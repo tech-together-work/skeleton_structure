@@ -1,0 +1,29 @@
+.partners {
+  flex-wrap: wrap !important;
+  @include tablet {
+    gap: 16px !important;
+  }
+
+  > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      img {
+        width: 110px;
+        @include tablet {
+          width: 80px;
+        }
+      }
+    }
+
+    img {
+      width: 160px;
+      @include tablet {
+        width: 120px;
+      }
+    }
+  }
+}

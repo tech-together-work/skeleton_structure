@@ -11,4 +11,13 @@
       padding: 48px 0;
     }
   }
+  .partnersSection {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @include tablet {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
 }

@@ -6,6 +6,7 @@ import Metrics from './Metrics/Metrics';
 import SmallBanner from '../shared/common/SmallBanner/SmallBanner';
 import Container from '../shared/Container/Container';
 import DreamTour from '../shared/common/DreamTour/DreamTour';
+import Partners from './Partners/Partners';
 
 const Landing = () => {
   return (
@@ -24,6 +25,9 @@ const Landing = () => {
       <Container spacing={false}>
         <SmallBanner />
       </Container>
+      <Section className={styles.partnersSection}>
+        <Partners />
+      </Section>
       <Container className={styles.dreamTourContainer}>
         <DreamTour />
       </Container>
