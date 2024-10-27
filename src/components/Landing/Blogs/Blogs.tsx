@@ -8,8 +8,22 @@ const Blogs = () => {
   return (
     <div>
       <SectionHeading>Blogs about travelling</SectionHeading>
-      <Section>
+      <Section className={styles.grid}>
         <BlogCard
+          imageUrl={dummyImage}
+          heading="Discover the World- Visa-Free"
+          subHeading="Explore exciting destinations without the visa hassle! Discover the freedom of travel for Indian passport holders and embark on your next adventure."
+          linkUrl=""
+        />
+        <BlogCard
+          isRow
+          imageUrl={dummyImage}
+          heading="Discover the World- Visa-Free"
+          subHeading="Explore exciting destinations without the visa hassle! Discover the freedom of travel for Indian passport holders and embark on your next adventure."
+          linkUrl=""
+        />
+        <BlogCard
+          isRow
           imageUrl={dummyImage}
           heading="Discover the World- Visa-Free"
           subHeading="Explore exciting destinations without the visa hassle! Discover the freedom of travel for Indian passport holders and embark on your next adventure."
