@@ -14,7 +14,7 @@ const SectionHeading: React.FC<Props> = ({ className, stars, children }) => {
     <Flex
       justifyContent="center"
       alignItems="center"
-      gap="32px"
+      gap="48px"
       className={styles.sectionHeading}
     >
       <img src={image} alt="image" className={styles.leftImage} />
