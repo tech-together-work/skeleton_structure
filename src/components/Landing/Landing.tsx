@@ -8,6 +8,7 @@ import Container from '../shared/Container/Container';
 import DreamTour from '../shared/common/DreamTour/DreamTour';
 import Partners from './Partners/Partners';
 import Awards from './Awards/Awards';
+import Blogs from './Blogs/Blogs';
 
 const Landing = () => {
   return (
@@ -29,9 +30,12 @@ const Landing = () => {
       <Section className={styles.partnersSection}>
         <Partners />
       </Section>
-      <Section className={styles.awardsSection}>
+      <Container className={styles.awardsContainer}>
         <Awards />
-      </Section>
+      </Container>
+      <Container className={styles.blogsSection}>
+        <Blogs />
+      </Container>
       <Container className={styles.dreamTourContainer}>
         <DreamTour />
       </Container>
