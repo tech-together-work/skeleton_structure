@@ -8,11 +8,12 @@ import {
   getStateList,
 } from '../sanity/index';
 import { getImageUrl } from '../sanity/helper';
+import { Post } from '../sanity/types/post';
 
 import { useEffect, useState } from 'react';
 
 const About = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -37,7 +38,6 @@ const About = () => {
     <div>
       {posts.map((post) => (
         <div key={post._id}>
-          {/* Display post content here */}
           <h3>{post.title}</h3>
           <img src={getImageUrl(post.image)} alt={post.title} />
         </div>
