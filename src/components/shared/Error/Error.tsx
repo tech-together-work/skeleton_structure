@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { RoutesEnum } from '../../../enums/RouteEnums';
 import { useRouteError } from 'react-router-dom';
 import Flex from '../Flex/Flex';
-import { H1, H3 } from '../Text/Text';
+import { H1 } from '../Text/Text';
 import Button from '../Button/Button';
 import { ColorsEnum } from '../../../enums/ColorsEnum';
 
