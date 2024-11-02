@@ -8,6 +8,7 @@ import { ColorsEnum } from '../../../enums/ColorsEnum';
 
 const ErrorTemplate = () => {
   const errorResponse: any = useRouteError();
+  console.log('errorResponse', errorResponse);
   return (
     <Flex
       justifyContent="center"
@@ -17,7 +18,6 @@ const ErrorTemplate = () => {
       gap="8px"
     >
       <H1 color={ColorsEnum.Primary}>Something went wrong!</H1>
-      <H3>{errorResponse.error.message}</H3>
       <Link to={RoutesEnum.HOME}>
         <Button>Reload</Button>
       </Link>
