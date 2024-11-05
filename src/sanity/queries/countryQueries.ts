@@ -5,7 +5,7 @@ export const fetchAllCountryDetails = `*[_type == "country"] {
       title,
       cities[]->{
         title,
-        listingTypes[]->{
+        tourTypes[]->{
           title
         }
       }
@@ -18,7 +18,7 @@ export const fetchCountryByName = `*[_type == "country" && slug.current == $slug
       title,
       cities[]->{
         title,
-        listingTypes[]->{
+        tourTypes[]->{
           title
         }
       }

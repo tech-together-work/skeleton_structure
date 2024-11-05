@@ -2,7 +2,7 @@ export const fetchStateDetails = `*[_type == "state"] {
     title,
       cities[]->{
         title,
-        listingTypes[]->{
+        tourTypes[]->{
           title
         }
       }  

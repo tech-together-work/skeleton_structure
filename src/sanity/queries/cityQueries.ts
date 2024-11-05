@@ -1,10 +1,10 @@
 // src/sanity/queries/cityQueries.ts
-export const fetchSelectedCity = `*[_type == "city" && defined(listingTypes[title == "Solo"])] {
+export const fetchSelectedCity = `*[_type == "city" && defined(tourTypes[title == "Solo"])] {
     title,
     state->{
       title
     },
-    listingTypes[]->{
+    tourTypes[]->{
       title
     }
   }`;
@@ -15,7 +15,7 @@ export const fetchAllCities = `*[_type == "city"] {
       title
     },
     "slug" : slug.current,
-    listingTypes[]->{
+    tourTypes[]->{
       title
     }  
 }`;
