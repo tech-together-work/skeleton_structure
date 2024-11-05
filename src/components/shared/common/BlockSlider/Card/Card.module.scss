@@ -1,18 +1,21 @@
 .card {
   max-width: 428px;
   border: 2px solid var(--color-primary);
+  padding: 15px;
   @include tablet {
     max-width: 300px;
+    padding: 12px;
   }
 
   .imageWrap {
-    padding: 15px;
     width: 100%;
     height: 460px;
+    position: relative;
+    margin-bottom: 15px;
 
     @include tablet {
       height: 400px;
-      padding: 12px;
+      margin-bottom: 12px;
     }
 
     .image {
@@ -20,18 +23,47 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .subText {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255, 66, 8, 0) 0%, #ff4208 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 24px 42px;
+      opacity: 0;
+
+      @include laptop {
+        display: none;
+      }
+
+      h6 {
+        color: var(--color-offwhite) !important;
+      }
+    }
   }
 
   h6 {
     width: 100%;
     text-align: center;
     padding-top: 13px;
-    padding-bottom: 28px;
+    padding-bottom: 13px;
 
     @include tablet {
-      padding-bottom: 12px;
+      padding-bottom: 0;
       padding-top: 4px;
       font-size: 16px;
+    }
+  }
+
+  &:hover {
+    .subText {
+      opacity: 1;
     }
   }
 }
