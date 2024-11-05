@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './BlockSlider.module.scss';
 import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import Card from './Card/Card';
 import SwiperNav from '../SwiperNav/SwiperNav';
@@ -12,7 +12,7 @@ const BlockSlider = () => {
       <Swiper
         speed={700}
         className={styles.swiper}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         spaceBetween={'24px'}
         slidesPerView={'auto'}
         pagination={{ clickable: true }}

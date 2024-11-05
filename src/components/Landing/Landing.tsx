@@ -12,6 +12,7 @@ import Blogs from './Blogs/Blogs';
 import HolidayTypes from './HolidayTypes/HolidayTypes';
 import StatesSlider from './StatesSlider/StatesSlider';
 import Luxury from './Luxury/Luxury';
+import NotSureTour from '../shared/common/NotSureTour/NotSureTour';
 
 const Landing = () => {
   return (
@@ -41,6 +42,11 @@ const Landing = () => {
       </Container>
       <Section className={styles.partnersSection}>
         <Partners />
+      </Section>
+      <Section className={styles.notSureContainer}>
+        <Container>
+          <NotSureTour />
+        </Container>
       </Section>
       <Container className={styles.awardsSection} spacing={false}>
         <Awards />

@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './CurveSlider.module.scss';
 import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import Card from './Card/Card';
 import SwiperNav from '../SwiperNav/SwiperNav';
@@ -17,7 +17,7 @@ const CurveSlider = () => {
     <div className={styles.curveSliderContainer}>
       <Swiper
         className={styles.swiper}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         spaceBetween={'24px'}
         breakpoints={{
           200: {

@@ -11,6 +11,14 @@
       padding: 48px 0;
     }
   }
+  .notSureContainer {
+    > div {
+      background-color: var(--color-tertiary);
+      @include tablet {
+        padding: 0;
+      }
+    }
+  }
   .partnersSection {
     padding-top: 48px;
     padding-bottom: 48px;
