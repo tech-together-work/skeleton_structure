@@ -137,12 +137,11 @@
     h3 {
       text-align: center;
       color: var(--color-offwhite) !important;
-      font-size: 48px;
+      font-size: clamp(20px, 3vw, 40px);
       padding: 20px 28px;
       background-color: var(--color-primary);
 
       @include laptop {
-        font-size: 24px;
         padding: 8px 12px;
       }
       @include tablet {
