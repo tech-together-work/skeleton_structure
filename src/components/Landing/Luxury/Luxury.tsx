@@ -6,6 +6,7 @@ import dummyImage from '../../../assets/images/banner.png';
 import { H2, H6 } from '../../shared/Text/Text';
 import LinkButton from '../../shared/LinkButton/LinkButton';
 import Section from '../../shared/Section/Section';
+import disc from '../../../assets/images/disc2.svg';
 
 const Luxury = () => {
   return (
@@ -28,6 +29,7 @@ const Luxury = () => {
             Why Swagatam
           </LinkButton>
         </div>
+        <img src={disc} alt="image" className={styles.disc} />
       </Flex>
     </Section>
   );

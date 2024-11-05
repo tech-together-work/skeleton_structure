@@ -13,6 +13,7 @@
 
   .whySwagatam {
     margin-top: 62px;
+    position: relative;
 
     @include tablet {
       flex-direction: column !important;
@@ -66,6 +67,17 @@
       }
       .button {
         width: fit-content;
+      }
+    }
+    .disc {
+      position: absolute;
+      top: -60px;
+      right: -49px;
+      width: 15vw;
+      max-width: 250px;
+      min-width: 50px;
+      @include smallDesktop {
+        display: none;
       }
     }
   }
