@@ -1,11 +1,15 @@
-.slider {
-  width: 428px !important;
-  @include tablet {
-    width: 300px !important;
-  }
-}
+// .slider {
+//   width: 325px !important;
+//   @include tablet {
+//     width: 300px !important;
+//   }
+// }
 .curveSliderContainer {
   position: relative;
+
+  .swiper-wrapper {
+    align-items: center;
+  }
 }
 .swiper {
   padding-left: 40px !important;

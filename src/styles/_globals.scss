@@ -57,7 +57,7 @@ a {
   &:hover {
     * {
       transition: all 0.3s ease-in-out;
-      color: var(--color-primary) !important;
+      color: var(--color-primary);
     }
   }
 }
@@ -66,4 +66,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-//Navigation arrows custom css
+:global(.curveWrapper) {
+  align-items: center;
+}
