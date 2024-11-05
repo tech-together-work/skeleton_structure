@@ -16,6 +16,7 @@ const BlockSlider = () => {
   return (
     <div className={styles.blockSwiperContainer}>
       <Swiper
+        className={styles.swiper}
         modules={[Navigation, Pagination]}
         spaceBetween={'24px'}
         slidesPerView={'auto'}

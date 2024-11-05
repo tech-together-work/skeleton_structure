@@ -10,6 +10,7 @@ import Partners from './Partners/Partners';
 import Awards from './Awards/Awards';
 import Blogs from './Blogs/Blogs';
 import BlockSlider from '../shared/common/BlockSlider/BlockSlider';
+import HolidayTypes from './HolidayTypes/HolidayTypes';
 
 const Landing = () => {
   return (
@@ -29,15 +30,15 @@ const Landing = () => {
         <SmallBanner />
       </Container>
       <Container spacing={false}>
-        <BlockSlider />
+        <HolidayTypes />
       </Container>
       <Section className={styles.partnersSection}>
         <Partners />
       </Section>
-      <Container className={styles.awardsContainer}>
+      <Container className={styles.awardsSection} spacing={false}>
         <Awards />
       </Container>
-      <Container className={styles.blogsSection}>
+      <Container className={styles.blogsSection} spacing={false}>
         <Blogs />
       </Container>
       <Container className={styles.dreamTourContainer}>

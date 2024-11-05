@@ -15,10 +15,10 @@ const SectionHeading: React.FC<Props> = ({ className, stars, children }) => {
       justifyContent="center"
       alignItems="center"
       gap="48px"
-      className={styles.sectionHeading}
+      className={clsx(styles.sectionHeading, className)}
     >
       <img src={image} alt="image" className={styles.leftImage} />
-      <H2 fontWeight="medium" className={clsx(styles.heading, className)}>
+      <H2 fontWeight="medium" className={clsx(styles.heading)}>
         {children}
       </H2>
       <img src={image} alt="image" className={styles.rightImage} />
