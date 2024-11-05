@@ -39,6 +39,7 @@ const CurveSlider = () => {
             spaceBetween: 24,
           },
         }}
+        speed={700}
         wrapperClass={'curveWrapper'}
         loop
         centeredSlides

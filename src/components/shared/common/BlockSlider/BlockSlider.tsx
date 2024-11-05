@@ -16,6 +16,7 @@ const BlockSlider = () => {
   return (
     <div className={styles.blockSwiperContainer}>
       <Swiper
+        speed={700}
         className={styles.swiper}
         modules={[Navigation, Pagination]}
         spaceBetween={'24px'}
