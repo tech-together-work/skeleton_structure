@@ -11,6 +11,7 @@ import Awards from './Awards/Awards';
 import Blogs from './Blogs/Blogs';
 import BlockSlider from '../shared/common/BlockSlider/BlockSlider';
 import HolidayTypes from './HolidayTypes/HolidayTypes';
+import StatesSlider from './StatesSlider/StatesSlider';
 
 const Landing = () => {
   return (
@@ -26,6 +27,9 @@ const Landing = () => {
       <Section>
         <Metrics />
       </Section>
+      <Container spacing={false}>
+        <StatesSlider />
+      </Container>
       <Container spacing={false}>
         <SmallBanner />
       </Container>
