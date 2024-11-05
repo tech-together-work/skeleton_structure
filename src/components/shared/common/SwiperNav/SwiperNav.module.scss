@@ -1,0 +1,28 @@
+.arrow {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: var(--color-offwhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 29px);
+  filter: drop-shadow(-5px 2px 20px rgba(95, 70, 52, 0.4));
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+}
+.arrow.prev {
+  left: 56px;
+  img {
+    transform: rotate(-180deg);
+  }
+}
+.arrow.next {
+  right: 56px;
+}

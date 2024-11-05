@@ -9,6 +9,7 @@ import DreamTour from '../shared/common/DreamTour/DreamTour';
 import Partners from './Partners/Partners';
 import Awards from './Awards/Awards';
 import Blogs from './Blogs/Blogs';
+import BlockSlider from '../shared/common/BlockSlider/BlockSlider';
 
 const Landing = () => {
   return (
@@ -26,6 +27,9 @@ const Landing = () => {
       </Section>
       <Container spacing={false}>
         <SmallBanner />
+      </Container>
+      <Container spacing={false}>
+        <BlockSlider />
       </Container>
       <Section className={styles.partnersSection}>
         <Partners />
