@@ -14,7 +14,7 @@
   cursor: pointer;
 
   @include tablet {
-    display: none;
+    display: none !important;
   }
 }
 .arrow.prev {
@@ -25,4 +25,10 @@
 }
 .arrow.next {
   right: 56px;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: flex;
 }
