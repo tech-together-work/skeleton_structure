@@ -9,9 +9,9 @@ import DreamTour from '../shared/common/DreamTour/DreamTour';
 import Partners from './Partners/Partners';
 import Awards from './Awards/Awards';
 import Blogs from './Blogs/Blogs';
-import BlockSlider from '../shared/common/BlockSlider/BlockSlider';
 import HolidayTypes from './HolidayTypes/HolidayTypes';
 import StatesSlider from './StatesSlider/StatesSlider';
+import Luxury from './Luxury/Luxury';
 
 const Landing = () => {
   return (
@@ -35,6 +35,9 @@ const Landing = () => {
       </Container>
       <Container spacing={false}>
         <HolidayTypes />
+      </Container>
+      <Container spacing={false}>
+        <Luxury />
       </Container>
       <Section className={styles.partnersSection}>
         <Partners />

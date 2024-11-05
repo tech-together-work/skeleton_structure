@@ -1,13 +1,7 @@
-// Import React and Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './BlockSlider.module.scss';
-// Import Swiper styles
 import 'swiper/css';
-
-// Import any additional modules you need
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
-// Import the Swiper's CSS for the modules you're using
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import Card from './Card/Card';
 import SwiperNav from '../SwiperNav/SwiperNav';
