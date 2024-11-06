@@ -39,11 +39,14 @@
       position: absolute;
       bottom: 34px;
       left: 24px;
+      font-size: 18px !important;
+      line-height: normal;
 
       @include laptop {
         position: relative;
         bottom: initial;
         left: initial;
+        font-size: 12px !important;
       }
     }
   }
