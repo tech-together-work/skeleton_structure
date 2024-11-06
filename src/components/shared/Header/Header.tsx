@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Flex from '../Flex/Flex';
-import Section from '../Section/Section';
 import styles from './Header.module.scss';
 import Menu from '../Menu/Menu';
 import { P, Text } from '../Text/Text';
