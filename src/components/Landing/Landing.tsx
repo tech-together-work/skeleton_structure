@@ -29,16 +29,16 @@ const Landing = () => {
       <Section>
         <Metrics />
       </Section>
-      <Container spacing={false}>
+      <Container className={styles.statesSlider}>
         <StatesSlider />
       </Container>
       <Container spacing={false}>
         <SmallBanner />
       </Container>
-      <Container spacing={false}>
+      <Container>
         <HolidayTypes />
       </Container>
-      <Container spacing={false}>
+      <Container className={styles.luxurySlider}>
         <Luxury />
       </Container>
       <Section className={styles.partnersSection}>
@@ -49,17 +49,19 @@ const Landing = () => {
           <NotSureTour />
         </Container>
       </Section>
-      <Container className={styles.storiesSection} spacing={false}>
+      <Container>
         <TripStories />
       </Container>
-      <Container className={styles.awardsSection} spacing={false}>
+      <Container>
         <Awards />
       </Container>
-      <Container className={styles.blogsSection} spacing={false}>
+      <Container>
         <Blogs />
       </Container>
-      <Container className={styles.dreamTourContainer}>
-        <DreamTour />
+      <Container className={styles.dreamTourContainer} spacing={false}>
+        <Container>
+          <DreamTour />
+        </Container>
       </Container>
     </div>
   );

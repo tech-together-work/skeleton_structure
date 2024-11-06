@@ -1,7 +1,9 @@
 .partners {
   flex-wrap: wrap !important;
+  padding: 48px;
   @include tablet {
     gap: 16px !important;
+    padding: 32px 0;
   }
 
   > div {
@@ -10,19 +12,12 @@
     justify-content: center;
     align-items: center;
 
-    &:first-child {
-      img {
-        width: 110px;
-        @include tablet {
-          width: 80px;
-        }
-      }
-    }
-
     img {
       width: 160px;
+      height: 160px;
       @include tablet {
         width: 120px;
+        height: 120px;
       }
     }
   }

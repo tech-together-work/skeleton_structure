@@ -3,12 +3,11 @@
   letter-spacing: -0.48px;
 }
 .sectionHeading {
-  padding-top: 84px;
   margin-bottom: 48px;
   overflow: hidden;
   @include tablet {
     justify-content: space-between !important;
-    padding-top: 48px;
+    margin-bottom: 32px;
   }
 }
 .rightImage {

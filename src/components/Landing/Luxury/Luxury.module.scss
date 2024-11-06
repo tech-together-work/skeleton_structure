@@ -1,9 +1,4 @@
 .luxury {
-  background-color: var(--color-secondary);
-  padding-bottom: 84px;
-  @include tablet {
-    padding-bottom: 64px;
-  }
   .heading {
     h2 {
       max-width: 600px;
