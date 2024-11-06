@@ -8,8 +8,9 @@ import clsx from 'clsx';
 
 interface Props {
   isHovered?: boolean;
+  name: string;
 }
-const Country: React.FC<Props> = ({ isHovered }) => {
+const Country: React.FC<Props> = ({ isHovered, name }) => {
   return (
     <Link to={''}>
       <Flex gap="12px" className={clsx(styles.item, isHovered && styles.hover)}>
@@ -17,7 +18,7 @@ const Country: React.FC<Props> = ({ isHovered }) => {
           <img src={dummyImage} alt="image" />
         </div>
         <Flex direction="column">
-          <H6 fontWeight="semibold">India</H6>
+          <H6 fontWeight="semibold">{name}</H6>
           <P fontWeight="regular" color={ColorsEnum.Neutral300}>
             Travel with your loved once
           </P>

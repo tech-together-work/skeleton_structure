@@ -34,7 +34,10 @@ const DestinationDropdown: React.FC<Props> = ({ className }) => {
           {arr.map((country, index) => {
             return (
               <div key={index} onMouseEnter={() => handleCountryHover(index)}>
-                <Country isHovered={hoveredCountry === index} />
+                <Country
+                  name={country.name}
+                  isHovered={hoveredCountry === index}
+                />
               </div>
             );
           })}
