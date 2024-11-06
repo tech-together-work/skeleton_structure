@@ -27,12 +27,13 @@
   }
   .line {
     width: 2px;
-    background: var(--neutral-200);
+    background: var(--neutral-100);
     position: absolute;
     height: 100%;
     top: 0;
     left: 330px;
     outline: none;
+    border: none;
   }
 
   .craft {
