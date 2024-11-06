@@ -12,7 +12,7 @@ import Button from '../Button/Button';
 const Header = () => {
   return (
     <nav className={styles.navBar}>
-      <Section className={styles.section}>
+      <div className={styles.section}>
         <div className={styles.headerWrap}>
           <Flex alignItems="center" gap="40px" className={styles.hide}>
             <Menu />
@@ -49,7 +49,7 @@ const Header = () => {
             </Link>
           </Flex>
         </div>
-      </Section>
+      </div>
     </nav>
   );
 };

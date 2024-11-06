@@ -25,6 +25,13 @@
       gap: 0 !important;
     }
 
+    h4 {
+      @include tablet {
+        font-size: 28px !important;
+        @include medium;
+      }
+    }
+
     p {
       margin-top: 16px;
       margin-bottom: 32px;
