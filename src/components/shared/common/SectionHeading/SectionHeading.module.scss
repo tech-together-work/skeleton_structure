@@ -1,6 +1,11 @@
 .heading {
   text-align: center;
-  letter-spacing: -0.48px;
+  letter-spacing: -0.96px;
+  line-height: 57.6px;
+  @include tablet {
+    line-height: 30.8px;
+    @include semibold;
+  }
 }
 .sectionHeading {
   margin-bottom: 48px;

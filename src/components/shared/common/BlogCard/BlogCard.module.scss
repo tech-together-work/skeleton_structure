@@ -22,12 +22,14 @@
     @include tablet {
       padding: 32px 24px;
       height: auto;
+      gap: 0 !important;
     }
 
     p {
       margin-top: 16px;
       margin-bottom: 32px;
       max-width: 487px;
+      line-height: 24px;
       @include tablet {
         margin-bottom: 16px;
         font-size: 12px;

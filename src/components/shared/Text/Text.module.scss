@@ -20,38 +20,44 @@
 .h3 {
   font-size: 32px;
   font-weight: normal;
-  line-height: 44.8px;
+  // line-height: 44.8px;
+  line-height: normal;
 }
 .h4 {
   font-size: 28px;
   font-weight: normal;
-
+  line-height: normal;
   @include tablet {
     font-size: 20px;
-    line-height: 22px;
+    // line-height: 22px;
+    line-height: normal;
   }
 }
 .h5 {
   font-size: 24px;
   font-weight: normal;
+  line-height: normal;
   @include tablet {
     font-size: 20px;
 
-    line-height: 26px;
+    // line-height: 26px;
   }
 }
 .h6 {
   font-size: 20px;
   font-weight: normal;
+  line-height: normal;
 }
 .p {
   font-size: 16px;
   font-weight: normal;
+  line-height: normal;
 }
 
 .font_26 {
-  line-height: 28.6px;
+  // line-height: 28.6px;
   letter-spacing: 0.26px;
+  line-height: normal;
 }
 
 .regular {

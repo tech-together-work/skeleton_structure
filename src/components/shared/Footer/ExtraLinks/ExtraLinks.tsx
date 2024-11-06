@@ -11,47 +11,74 @@ const ExtraLinks = () => {
   const resources = ['India', 'Nepal', 'Sri Lanka', 'Tibet', 'Bhutan'];
   return (
     <Flex className={styles.extraLinks}>
-      <Flex flexDirection="column" gap="8px" className={styles.firstWrap}>
-        <P className={styles.head} color={ColorsEnum.Neutral300}>
+      <Flex flexDirection="column" gap="12px" className={styles.firstWrap}>
+        <P
+          fontWeight="medium"
+          className={styles.head}
+          color={ColorsEnum.Neutral300}
+        >
           Destination
         </P>
         {resources.map((item, index) => {
           return (
             <Link to={''} key={index} className={styles.link}>
-              <P color={ColorsEnum.Neutral900}>{item}</P>
+              <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+                {item}
+              </P>
             </Link>
           );
         })}
       </Flex>
-      <Flex flexDirection="column" gap="8px" className={styles.secWrap}>
-        <P className={styles.head} color={ColorsEnum.Neutral300}>
+      <Flex flexDirection="column" gap="12px" className={styles.secWrap}>
+        <P
+          fontWeight="medium"
+          className={styles.head}
+          color={ColorsEnum.Neutral300}
+        >
           Resources
         </P>
         <Link to={''} className={styles.link}>
-          <P color={ColorsEnum.Neutral900}>Home</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            Home
+          </P>
         </Link>
         <Link to={''} className={styles.link}>
-          <P color={ColorsEnum.Neutral900}>Destinations</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            Destinations
+          </P>
         </Link>
         <Link to={''} className={styles.link}>
-          <P color={ColorsEnum.Neutral900}>Holiday Types</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            Holiday Types
+          </P>
         </Link>
         <Link to={''} className={styles.link}>
-          <P color={ColorsEnum.Neutral900}>About</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            About
+          </P>
         </Link>
         <Link to={''} className={styles.link}>
-          <P color={ColorsEnum.Neutral900}>Contact</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            Contact
+          </P>
         </Link>
       </Flex>
-      <Flex flexDirection="column" gap="8px" className={styles.thirdWrap}>
-        <P className={styles.head} color={ColorsEnum.Neutral300}>
+      <Flex flexDirection="column" gap="12px" className={styles.thirdWrap}>
+        <P
+          fontWeight="medium"
+          className={styles.head}
+          color={ColorsEnum.Neutral300}
+        >
           Call us
         </P>
         <Link to={'tel:+919650250809'} className={styles.link}>
           <Call />
-          <P color={ColorsEnum.Neutral900}>+91 9650250809</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            +91 9650250809
+          </P>
         </Link>
         <P
+          fontWeight="medium"
           className={clsx(styles.head, styles.email)}
           color={ColorsEnum.Neutral300}
         >
@@ -59,11 +86,15 @@ const ExtraLinks = () => {
         </P>
         <Link to={'mailto:mail@swagatamtour.com'} className={styles.link}>
           <Mail />
-          <P color={ColorsEnum.Neutral900}>mail@swagatamtour.com</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            mail@swagatamtour.com
+          </P>
         </Link>
         <Link to={'mailto:sales@swagatamtour.com'} className={styles.link}>
           <Mail />
-          <P color={ColorsEnum.Neutral900}>sales@swagatamtour.com</P>
+          <P fontWeight="medium" color={ColorsEnum.Neutral900}>
+            sales@swagatamtour.com
+          </P>
         </Link>
       </Flex>
     </Flex>

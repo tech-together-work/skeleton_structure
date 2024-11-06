@@ -19,7 +19,7 @@ const Landing = () => {
   return (
     <div className={styles.home}>
       <Section>
-        <H1 className={styles.pageHeading}>
+        <H1 className={styles.pageHeading} fontWeight="semibold">
           Crafting Extraordinary Travel Journeys Since 1986
         </H1>
       </Section>
