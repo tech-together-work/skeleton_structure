@@ -1,0 +1,38 @@
+.blockSwiperContainer {
+  position: relative;
+}
+.singleBlockSwiper {
+  :global {
+    .swiper-pagination {
+      position: absolute;
+      right: 15px;
+      width: fit-content !important;
+      left: initial !important;
+      bottom: 35px !important;
+
+      @include tablet {
+        bottom: 19px !important;
+        right: 12px !important;
+      }
+    }
+    .swiper-pagination-bullet {
+      height: 4px;
+      border-radius: 0;
+      width: 20px;
+      background: var(--black-50);
+      margin: 0 2px !important;
+      @include tablet {
+        height: 2px;
+        width: 10px;
+        margin: 0 1px !important;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--color-offwhite);
+      width: 40px;
+      @include tablet {
+        width: 15px;
+      }
+    }
+  }
+}

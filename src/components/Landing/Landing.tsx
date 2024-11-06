@@ -13,6 +13,7 @@ import HolidayTypes from './HolidayTypes/HolidayTypes';
 import StatesSlider from './StatesSlider/StatesSlider';
 import Luxury from './Luxury/Luxury';
 import NotSureTour from '../shared/common/NotSureTour/NotSureTour';
+import TripStories from './TripStories/TripStories';
 
 const Landing = () => {
   return (
@@ -48,6 +49,9 @@ const Landing = () => {
           <NotSureTour />
         </Container>
       </Section>
+      <Container className={styles.storiesSection} spacing={false}>
+        <TripStories />
+      </Container>
       <Container className={styles.awardsSection} spacing={false}>
         <Awards />
       </Container>
