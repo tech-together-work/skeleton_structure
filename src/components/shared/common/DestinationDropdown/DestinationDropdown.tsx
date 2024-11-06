@@ -6,18 +6,38 @@ import { H6, Text } from '../../Text/Text';
 import { ColorsEnum } from '../../../../enums/ColorsEnum';
 import Country from './Country/Country';
 import State from './State/State';
+import { useState } from 'react';
 
 interface Props {
   className?: string;
 }
 const DestinationDropdown: React.FC<Props> = ({ className }) => {
+  const arr = [
+    { name: 'India', state: [1, 2, 3, 4, 5, 6, 7, 8] },
+    { name: 'America', state: [1, 2] },
+    { name: 'China', state: [1, 2, 3, 4, 5] },
+  ];
+  const [hoveredCountry, setHoveredCountry] = useState<number>(0);
+
+  const handleCountryHover = (index: number) => {
+    setHoveredCountry(index);
+  };
+
+  const stateList = arr[hoveredCountry]?.state.map((state: any, index) => (
+    <State key={index} />
+  ));
+
   return (
     <div className={clsx(styles.destinationDrop, className)}>
       <Flex className={styles.wrapper}>
         <Flex className={styles.countries} direction="column" gap="4px">
-          <Country />
-          <Country />
-          <Country />
+          {arr.map((country, index) => {
+            return (
+              <div key={index} onMouseEnter={() => handleCountryHover(index)}>
+                <Country isHovered={hoveredCountry === index} />
+              </div>
+            );
+          })}
         </Flex>
         <hr className={styles.line} />
         <div className={styles.states}>
@@ -27,14 +47,9 @@ const DestinationDropdown: React.FC<Props> = ({ className }) => {
               fontSize={18}
               fontWeight="medium"
             >
-              States in India
+              States in {arr[hoveredCountry].name}
             </Text>
-            <ul className={styles.stateList}>
-              <State />
-              <State />
-              <State />
-              <State />
-            </ul>
+            <ul className={styles.stateList}>{stateList}</ul>
           </Flex>
         </div>
       </Flex>

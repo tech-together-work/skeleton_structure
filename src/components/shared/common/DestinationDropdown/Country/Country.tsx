@@ -4,11 +4,15 @@ import Flex from '../../../Flex/Flex';
 import { H6, P } from '../../../Text/Text';
 import styles from './Country.module.scss';
 import dummyImage from '../../../../../assets/images/banner.png';
+import clsx from 'clsx';
 
-const Country = () => {
+interface Props {
+  isHovered?: boolean;
+}
+const Country: React.FC<Props> = ({ isHovered }) => {
   return (
     <Link to={''}>
-      <Flex gap="12px" className={styles.item}>
+      <Flex gap="12px" className={clsx(styles.item, isHovered && styles.hover)}>
         <div className={styles.icon}>
           <img src={dummyImage} alt="image" />
         </div>

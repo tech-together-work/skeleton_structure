@@ -1,6 +1,7 @@
 .destinationDrop {
   background-color: var(--color-white);
   border-radius: 8px;
+  overflow: hidden;
   filter: drop-shadow(-5px 14px 8px rgba(95, 70, 52, 0.4));
   .wrapper {
     margin: 32px 24px;
@@ -9,16 +10,8 @@
   .countries {
     padding-right: 42px;
   }
-  .line {
-    border-left: 2px solid var(--neutral-200);
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 330px;
-  }
   .states {
     padding-left: 42px;
-
     .stateList {
       display: flex;
       flex-direction: column;
@@ -28,9 +21,20 @@
 
       li {
         min-width: 200px;
+        list-style: none;
       }
     }
   }
+  .line {
+    width: 2px;
+    background: var(--neutral-200);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 330px;
+    outline: none;
+  }
+
   .craft {
     background-color: var(--color-grey-light);
     padding: 42px 32px;

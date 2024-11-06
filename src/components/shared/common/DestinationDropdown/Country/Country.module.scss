@@ -28,4 +28,10 @@
       color: var(--color-primary);
     }
   }
+  &.hover {
+    background-color: var(--color-primary-light);
+    .icon {
+      color: var(--color-primary);
+    }
+  }
 }
