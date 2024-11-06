@@ -45,6 +45,7 @@
   }
 }
 .hide {
+  height: 66%;
   @include laptop {
     display: none !important;
   }
