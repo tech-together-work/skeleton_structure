@@ -6,7 +6,7 @@ import { H5 } from '../../Text/Text';
 import styles from './Form.module.scss';
 const Form = () => {
   return (
-    <div className={styles.form}>
+    <form className={styles.form}>
       <Flex alignItems="center" gap="8px" className={styles.heading}>
         <hr />
         <H5 fontWeight="semibold">Send a query</H5>
@@ -57,7 +57,7 @@ const Form = () => {
           <Button>Send query</Button>
         </Flex>
       </Flex>
-    </div>
+    </form>
   );
 };
 

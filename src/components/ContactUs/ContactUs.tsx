@@ -3,6 +3,8 @@ import Section from '../shared/Section/Section';
 import styles from './ContactUs.module.scss';
 import Form from '../shared/common/Form/Form';
 import LeftContent from './LeftContent/LeftContent';
+import Container from '../shared/Container/Container';
+import Faq from './Faq/Faq';
 
 const ContactUs = () => {
   return (
@@ -13,6 +15,10 @@ const ContactUs = () => {
           <Form />
         </Flex>
       </Section>
+
+      <Container>
+        <Faq />
+      </Container>
     </div>
   );
 };
