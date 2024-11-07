@@ -6,6 +6,7 @@
   width: 100%;
   @include tablet {
     padding: 24px 32px;
+    max-width: 100%;
   }
 
   .heading {

@@ -4,6 +4,7 @@ import Button from '../../Button/Button';
 import Flex from '../../Flex/Flex';
 import { H5 } from '../../Text/Text';
 import styles from './Form.module.scss';
+// import QuerySent from './QuerySent/QuerySent';
 const Form = () => {
   return (
     <form className={styles.form}>
@@ -57,6 +58,7 @@ const Form = () => {
           <Button>Send query</Button>
         </Flex>
       </Flex>
+      {/* <QuerySent /> */}
     </form>
   );
 };

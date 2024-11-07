@@ -1,0 +1,23 @@
+.querySent {
+  margin-top: 48px;
+  @include tablet {
+    gap: 8px !important;
+  }
+
+  svg {
+    @include tablet {
+      width: 20%;
+    }
+  }
+
+  p {
+    text-align: center;
+    line-height: 25.2px;
+    @include tablet {
+      line-height: normal;
+    }
+  }
+  button {
+    margin-top: 44px;
+  }
+}
