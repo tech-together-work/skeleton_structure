@@ -39,6 +39,10 @@
     &:hover * {
       color: var(--color-primary) !important;
     }
+
+    &.activeRoute * {
+      color: var(--color-primary) !important;
+    }
   }
 }
 .logo {
@@ -51,6 +55,9 @@
     @include laptop {
       width: 40px;
     }
+  }
+  &:hover p {
+    color: initial !important;
   }
 }
 .hide {

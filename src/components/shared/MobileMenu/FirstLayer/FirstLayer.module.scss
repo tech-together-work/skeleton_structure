@@ -1,0 +1,30 @@
+.firstLayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 56px;
+
+  .item {
+    padding: 24px 4px;
+    border-bottom: 1px solid var(--neutral-100);
+
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+  .link {
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+  .two {
+    padding: 0 16px;
+    > *,
+    button {
+      width: 100%;
+    }
+  }
+  .activeRoute * {
+    color: var(--color-primary) !important;
+  }
+}

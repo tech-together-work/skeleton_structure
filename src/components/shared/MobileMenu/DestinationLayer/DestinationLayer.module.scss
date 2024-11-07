@@ -1,0 +1,54 @@
+.destinationLayer {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  .back {
+    padding: 0 16px;
+    padding-top: 24px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-offwhite);
+    padding-bottom: 4px;
+    z-index: 9;
+    svg {
+      transform: rotate(90deg);
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .countryStateWrap {
+    .statesWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      height: 0;
+      overflow: hidden;
+      width: calc(100% - 30%);
+      margin: 0 auto;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+    }
+    > div {
+      position: relative;
+      svg {
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 16px;
+      }
+    }
+    &.openStates {
+      .statesWrap {
+        height: max-content;
+        padding-top: 8px;
+        opacity: 1;
+      }
+      > div {
+        svg {
+          transform: rotate(-180deg);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

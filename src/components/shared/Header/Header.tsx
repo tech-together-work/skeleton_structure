@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Flex from '../Flex/Flex';
 import styles from './Header.module.scss';
 import Menu from '../Menu/Menu';
@@ -13,6 +13,7 @@ import clsx from 'clsx';
 
 const Header = () => {
   const [hamActive, setHamActive] = useState<boolean>(false);
+  const location = useLocation();
 
   useEffect(() => {
     if (hamActive) {
@@ -25,13 +26,22 @@ const Header = () => {
     };
   }, [hamActive]);
 
+  useEffect(() => {
+    setHamActive(false);
+  }, [location]);
+
   return (
     <nav className={styles.navBar}>
       <div className={styles.section}>
         <div className={styles.headerWrap}>
           <Flex alignItems="center" gap="40px" className={styles.hide}>
             <Menu />
-            <Link to={RoutesEnum.ABOUT}>
+            <Link
+              to={RoutesEnum.ABOUT}
+              className={
+                location.pathname === RoutesEnum.ABOUT ? styles.activeRoute : ''
+              }
+            >
               <P color={ColorsEnum.Black80}>About</P>
             </Link>
           </Flex>
