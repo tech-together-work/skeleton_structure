@@ -69,18 +69,27 @@
   display: none;
   @include laptop {
     display: block;
+    width: 24px;
+    height: 24px;
   }
-}
 
-.menu-toggle {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  border: hidden;
-  transition: all 250ms ease-in-out;
-  cursor: pointer;
+  .slide {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: calc(100vh - 64px);
+    background-color: var(--color-offwhite);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 9;
+
+    &.slideIt {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
 }
 
 .menuToggle {
@@ -89,6 +98,7 @@
   margin-right: 16px;
   top: -4px;
   position: relative;
+  width: 100%;
 }
 
 .menuBar {

@@ -8,11 +8,23 @@ import logo from '../../../assets/images/logo.svg';
 import { RoutesEnum } from '../../../enums/RouteEnums';
 import Button from '../Button/Button';
 import MobileMenu from '../MobileMenu/MobileMenu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
 const Header = () => {
   const [hamActive, setHamActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (hamActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [hamActive]);
+
   return (
     <nav className={styles.navBar}>
       <div className={styles.section}>
@@ -53,10 +65,14 @@ const Header = () => {
           </Flex>
           <div className={styles.mobileMenu}>
             <HamBurger
-              onClick={() => setHamActive(!hamActive)}
+              onClick={() => {
+                setHamActive((prev) => !prev);
+              }}
               isActive={hamActive}
             />
-            <MobileMenu />
+            <div className={clsx(styles.slide, hamActive && styles.slideIt)}>
+              <MobileMenu />
+            </div>
           </div>
         </div>
       </div>

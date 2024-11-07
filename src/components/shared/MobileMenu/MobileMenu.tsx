@@ -1,6 +1,6 @@
 import styles from './MobileMenu.module.scss';
 const MobileMenu = () => {
-  return <div></div>;
+  return <div className={styles.mobileMenu}></div>;
 };
 
 export default MobileMenu;
