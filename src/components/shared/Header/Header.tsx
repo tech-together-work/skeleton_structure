@@ -7,8 +7,12 @@ import { ColorsEnum } from '../../../enums/ColorsEnum';
 import logo from '../../../assets/images/logo.svg';
 import { RoutesEnum } from '../../../enums/RouteEnums';
 import Button from '../Button/Button';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 const Header = () => {
+  const [hamActive, setHamActive] = useState<boolean>(false);
   return (
     <nav className={styles.navBar}>
       <div className={styles.section}>
@@ -47,6 +51,13 @@ const Header = () => {
               <Button>Contact Us</Button>
             </Link>
           </Flex>
+          <div className={styles.mobileMenu}>
+            <HamBurger
+              onClick={() => setHamActive(!hamActive)}
+              isActive={hamActive}
+            />
+            <MobileMenu />
+          </div>
         </div>
       </div>
     </nav>
@@ -54,3 +65,19 @@ const Header = () => {
 };
 
 export default Header;
+
+interface HamProps {
+  onClick: () => void;
+  isActive: boolean;
+}
+const HamBurger: React.FC<HamProps> = ({ onClick, isActive }) => {
+  return (
+    <button
+      className={clsx(styles.menuToggle, isActive && styles.active)}
+      onClick={onClick}
+    >
+      <div className={styles.menuBar} data-position="top"></div>
+      <div className={styles.menuBar} data-position="bottom"></div>
+    </button>
+  );
+};

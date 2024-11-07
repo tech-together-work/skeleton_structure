@@ -30,6 +30,10 @@
 
   > div {
     flex: 1;
+
+    @include laptop {
+      flex: initial;
+    }
   }
   a {
     &:hover * {
@@ -59,4 +63,55 @@
   @include laptop {
     justify-content: flex-start !important;
   }
+}
+
+.mobileMenu {
+  display: none;
+  @include laptop {
+    display: block;
+  }
+}
+
+.menu-toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: hidden;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.menuToggle {
+  border: none;
+  outline: none;
+  margin-right: 16px;
+  top: -4px;
+  position: relative;
+}
+
+.menuBar {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--neutral-900);
+  transition-property: transform;
+  transition: all 250ms ease-out;
+}
+
+.menuBar[data-position='top'] {
+  transform: translateY(-3px);
+}
+
+.menuBar[data-position='bottom'] {
+  transform: translateY(3px);
+}
+
+.menuToggle.active .menuBar[data-position='top'] {
+  transform: translateY(0) rotate(45deg) scaleX(1.05);
+}
+
+.menuToggle.active .menuBar[data-position='bottom'] {
+  transform: translateY(0) rotate(-45deg) scaleX(1.05);
 }
