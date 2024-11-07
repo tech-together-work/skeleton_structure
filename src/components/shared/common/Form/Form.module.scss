@@ -75,6 +75,7 @@
         }
       }
     }
+
     sup {
       color: var(--color-primary);
     }
@@ -121,6 +122,37 @@
         letter-spacing: -0.28px;
         height: 40px;
       }
+    }
+  }
+}
+
+.number {
+  > div {
+    &:first-child {
+      max-width: 130px;
+    }
+  }
+  select {
+    border: 1px solid var(--neutral-100);
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    padding: 19px;
+    z-index: 0;
+    font-size: 16px;
+    color: var(--neutral-400);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'><path d='M18 9L12 15L6 9' stroke='grey' stroke-linecap='round' strokel-inejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 18px);
+    background-position-y: 50%;
+    @include regular;
+
+    @include tablet {
+      padding: 13px 13px;
+      font-size: 12px;
     }
   }
 }

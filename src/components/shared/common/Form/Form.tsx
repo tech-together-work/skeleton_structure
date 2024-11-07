@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Star from '../../../../assets/icons/Star';
 import Button from '../../Button/Button';
 import Flex from '../../Flex/Flex';
@@ -24,10 +25,19 @@ const Form = () => {
             Email <sup>*</sup>
           </span>
         </div>
-        <div className={styles.inputWrapper}>
-          <input name="phoneNumber" type="number" />
-          <span>Phone Number</span>
-        </div>
+        <Flex gap="20px" className={clsx(styles.couple, styles.number)}>
+          <div className={styles.inputWrapper}>
+            <select>
+              <option value="0">+91</option>
+              <option value="1">+92</option>
+            </select>
+          </div>
+          <div className={styles.inputWrapper}>
+            <input name="phoneNumber" type="number" />
+            <span>Phone Number</span>
+          </div>
+        </Flex>
+
         <Flex gap="20px" className={styles.couple}>
           <div className={styles.inputWrapper}>
             <input name="travelDate" type="number" />
