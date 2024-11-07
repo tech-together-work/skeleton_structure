@@ -12,19 +12,20 @@ interface Props {
 }
 const Country: React.FC<Props> = ({ isHovered, name }) => {
   return (
-    <Link to={''}>
-      <Flex gap="12px" className={clsx(styles.item, isHovered && styles.hover)}>
-        <div className={styles.icon}>
-          <img src={dummyImage} alt="image" />
-        </div>
-        <Flex direction="column">
+    <Flex gap="12px" className={clsx(styles.item, isHovered && styles.hover)}>
+      <div className={styles.icon}>
+        <img src={dummyImage} alt="image" />
+      </div>
+      <Flex direction="column">
+        <Link to={''}>
           <H6 fontWeight="semibold">{name}</H6>
-          <P fontWeight="regular" color={ColorsEnum.Neutral300}>
-            Travel with your loved once
-          </P>
-        </Flex>
+        </Link>
+
+        <P fontWeight="regular" color={ColorsEnum.Neutral300}>
+          Travel with your loved once
+        </P>
       </Flex>
-    </Link>
+    </Flex>
   );
 };
 
