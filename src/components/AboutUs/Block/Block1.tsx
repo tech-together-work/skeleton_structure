@@ -2,6 +2,7 @@ import { H1, H6 } from '../../shared/Text/Text';
 import styles from './Block.module.scss';
 import dummyImage from '../../../assets/images/banner.png';
 import clsx from 'clsx';
+// import star from '../../../assets/images/circlestar.png';
 
 const Block1 = () => {
   return (
@@ -17,6 +18,7 @@ const Block1 = () => {
       </div>
       <div className={styles.image}>
         <div className={styles.wrap}>
+          {/* <img src={star} className={styles.star} /> */}
           <div className={styles.inner}>
             <img src={dummyImage} alt="image" />
           </div>
