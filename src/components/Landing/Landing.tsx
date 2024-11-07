@@ -2,7 +2,7 @@ import styles from './Landing.module.scss';
 import { H1 } from '../shared/Text/Text';
 import Section from '../shared/Section/Section';
 import Banner from './Banner/Banner';
-import Metrics from './Metrics/Metrics';
+import Metrics from '../shared/common/Metrics/Metrics';
 import SmallBanner from '../shared/common/SmallBanner/SmallBanner';
 import Container from '../shared/Container/Container';
 import DreamTour from '../shared/common/DreamTour/DreamTour';

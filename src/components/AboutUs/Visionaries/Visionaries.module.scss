@@ -1,0 +1,143 @@
+.visionaries {
+  .heading h2 {
+    max-width: 456px;
+    color: var(--color-offwhite);
+  }
+  .wrapper {
+    padding-top: 32px;
+    @include tablet {
+      justify-content: center !important;
+      gap: 48px !important;
+      padding-top: 0;
+    }
+    .imageWrap {
+      border: 2px solid var(--color-primary);
+      padding: 12px;
+      border-top-left-radius: 300px;
+      border-top-right-radius: 300px;
+
+      .image {
+        height: 270px;
+        width: 250px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    h5 {
+      margin-top: 48px;
+    }
+    a {
+      margin-top: 12px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      @include semibold;
+      color: var(--neutral-100);
+      text-decoration: underline;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  .bottomSection {
+    margin-top: 120px;
+    padding: 48px 0;
+    margin-bottom: 112px;
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    align-items: center !important;
+
+    @include tablet {
+      border-top: none;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .border {
+      border-left: 2px solid var(--color-primary);
+      border-right: 2px solid var(--color-primary);
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    h2 {
+      max-width: 570px;
+
+      @include tablet {
+        @include semibold;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    h6 {
+      line-height: 28px;
+      @include tablet {
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25.2px;
+      }
+    }
+    .imageBlock {
+      min-width: 300px;
+      height: 378px;
+      padding: 0 52px;
+      position: relative;
+
+      @include tablet {
+        min-width: 100%;
+        width: 100%;
+        padding: 0px 16px 16px 16px;
+      }
+
+      &::before {
+        content: '';
+        width: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: var(--color-primary);
+        height: 100%;
+
+        @include tablet {
+          height: 2px;
+          width: calc(100% + 32px);
+          top: initial;
+          bottom: 0;
+          margin-left: -16px;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.mobile {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.desktop {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
