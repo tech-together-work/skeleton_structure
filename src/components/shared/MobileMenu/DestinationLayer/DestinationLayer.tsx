@@ -43,6 +43,7 @@ const DestinationLayer: React.FC<Props> = ({ onBack }) => {
       {arr.map((country, index) => {
         return (
           <div
+            key={index}
             className={clsx(
               styles.countryStateWrap,
               selectedCountry === index && styles.openStates
