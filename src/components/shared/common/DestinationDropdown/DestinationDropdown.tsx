@@ -23,7 +23,7 @@ const DestinationDropdown: React.FC<Props> = ({ className }) => {
     setHoveredCountry(index);
   };
 
-  const stateList = arr[hoveredCountry]?.state.map((state: any, index) => (
+  const stateList = arr[hoveredCountry]?.state.map((_: any, index) => (
     <State key={index} />
   ));
 

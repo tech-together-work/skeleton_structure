@@ -1,10 +1,7 @@
 import styles from './NotSureTour.module.scss';
 import Flex from '../../Flex/Flex';
-import { H6, P, Text } from '../../Text/Text';
-import { Link } from 'react-router-dom';
-import Call from '../../../../assets/icons/Call';
+import { H6, Text } from '../../Text/Text';
 import { ColorsEnum } from '../../../../enums/ColorsEnum';
-import Mail from '../../../../assets/icons/Mail';
 import Section from '../../Section/Section';
 import dummyImage from '../../../../assets/images/banner.png';
 import clsx from 'clsx';

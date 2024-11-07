@@ -44,7 +44,7 @@ const CurveSlider = () => {
           setActiveIndex(Math.floor(swiper.realIndex % arr.length));
         }}
       >
-        {arr.map((item, index) => {
+        {arr.map((_, index) => {
           return (
             <SwiperSlide key={index} className={styles.slider}>
               <Card isActive={index === activeIndex} />
