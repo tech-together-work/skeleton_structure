@@ -1,7 +1,7 @@
 import Flex from '../shared/Flex/Flex';
 import Section from '../shared/Section/Section';
 import styles from './ContactUs.module.scss';
-import Form from './Form/Form';
+import Form from '../shared/common/Form/Form';
 import LeftContent from './LeftContent/LeftContent';
 
 const ContactUs = () => {
