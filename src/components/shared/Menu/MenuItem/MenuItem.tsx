@@ -9,7 +9,7 @@ interface Props {
   href?: string;
   className?: string;
 }
-const MenuItem: React.FC<Props> = ({ name, className, href }) => {
+const MenuItem: React.FC<Props> = ({ name, className }) => {
   return (
     <Flex alignItems="center" className={className}>
       <Flex
