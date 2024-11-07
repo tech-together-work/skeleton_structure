@@ -1,0 +1,20 @@
+.awards {
+  flex-wrap: wrap !important;
+  @include tablet {
+    gap: 16px !important;
+  }
+
+  > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 120px;
+      @include tablet {
+        width: 80px;
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Flex from '../Flex/Flex';
-import Section from '../Section/Section';
 import styles from './Header.module.scss';
 import Menu from '../Menu/Menu';
 import { P, Text } from '../Text/Text';
@@ -12,7 +11,7 @@ import Button from '../Button/Button';
 const Header = () => {
   return (
     <nav className={styles.navBar}>
-      <Section className={styles.section}>
+      <div className={styles.section}>
         <div className={styles.headerWrap}>
           <Flex alignItems="center" gap="40px" className={styles.hide}>
             <Menu />
@@ -49,7 +48,7 @@ const Header = () => {
             </Link>
           </Flex>
         </div>
-      </Section>
+      </div>
     </nav>
   );
 };

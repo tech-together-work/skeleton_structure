@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ChevronDown from '../../../../assets/icons/ChevronDown';
 import { ColorsEnum } from '../../../../enums/ColorsEnum';
 import Flex from '../../Flex/Flex';
@@ -6,20 +7,22 @@ import styles from './MenuItem.module.scss';
 
 interface Props {
   name: string;
-  onClick?: () => void;
+  href?: string;
+  className?: string;
 }
-const MenuItem: React.FC<Props> = ({ name, onClick }) => {
+const MenuItem: React.FC<Props> = ({ name, className, href }) => {
   return (
-    <Flex
-      alignItems="center"
-      gap="6px"
-      className={styles.menuItem}
-      onClick={onClick}
-      color={ColorsEnum.Black80}
-    >
-      <P>{name}</P>
-      <ChevronDown />
-    </Flex>
+    <Link to={href ? href : ''} className={className}>
+      <Flex
+        alignItems="center"
+        gap="6px"
+        className={styles.menuItem}
+        color={ColorsEnum.Black80}
+      >
+        <P>{name}</P>
+        <ChevronDown />
+      </Flex>
+    </Link>
   );
 };
 

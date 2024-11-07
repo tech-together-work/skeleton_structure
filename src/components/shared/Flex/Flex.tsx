@@ -24,6 +24,7 @@ const Flex: FC<FlexProps> = ({
   wrap = 'nowrap',
   gap = '0',
   className,
+  onClick,
   ...props
 }) => {
   const style: CSSProperties = {
@@ -37,7 +38,7 @@ const Flex: FC<FlexProps> = ({
   };
 
   return (
-    <div style={style} className={className}>
+    <div style={style} className={className} onClick={onClick}>
       {children}
     </div>
   );

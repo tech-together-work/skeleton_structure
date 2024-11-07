@@ -1,0 +1,152 @@
+.card {
+  max-width: 335px;
+  padding: 15px;
+  position: relative;
+  padding-bottom: 0;
+  border: 2px solid transparent;
+  pointer-events: none;
+  overflow: hidden;
+  @include tablet {
+    padding: 12px;
+  }
+  .imageWrap {
+    width: 100%;
+    height: 407px;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+
+    @include tablet {
+      height: 150px;
+      margin-bottom: 12px;
+    }
+    .grad {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .subText {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255, 66, 8, 0) 0%, #ff4208 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 24px 42px;
+      opacity: 0;
+
+      @include laptop {
+        display: none;
+      }
+
+      h6 {
+        color: var(--color-offwhite) !important;
+        text-align: center;
+        padding-bottom: 32px;
+      }
+    }
+  }
+
+  &.active {
+    border: 2px solid var(--color-primary);
+    padding-bottom: 0;
+    pointer-events: auto;
+    width: 100%;
+    max-width: 625px;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+
+    .imageWrap {
+      height: 449px;
+      border-top-left-radius: 300px;
+      border-top-right-radius: 300px;
+      @include tablet {
+        height: 200px;
+      }
+    }
+    .grad {
+      display: none;
+    }
+
+    &:hover {
+      .subText {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.bottomText {
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  @include laptop {
+    padding-bottom: 0;
+    padding-top: 4px;
+  }
+  h3 {
+    text-align: center;
+    color: var(--color-offwhite) !important;
+    line-height: normal;
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+}
+.activeLink {
+  position: relative;
+  margin-bottom: 40px;
+  .bottomText {
+    position: absolute;
+    bottom: -42px;
+    display: flex;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+
+    @include laptop {
+      bottom: -22px;
+      padding-bottom: 0;
+      padding-top: 4px;
+    }
+    h3 {
+      text-align: center;
+      color: var(--color-offwhite) !important;
+      font-size: clamp(20px, 3vw, 40px);
+      padding: 20px 28px;
+      background-color: var(--color-primary);
+
+      @include laptop {
+        padding: 8px 12px;
+      }
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+  }
+}

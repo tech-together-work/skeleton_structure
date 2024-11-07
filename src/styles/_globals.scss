@@ -6,6 +6,8 @@
   --color-secondary: #402e29;
   --color-tertiary: #bd957a;
   --color-offwhite: #fdf9f6;
+  --color-primary-light: #f2e4da;
+  --color-grey-light: #f9f9f9;
 
   //Neutrals
   --neutral-50: #f0f0ef;
@@ -21,6 +23,7 @@
 
   //extras
   --black-80: rgba(0, 0, 0, 0.8);
+  --black-50: rgba(255, 255, 255, 0.5);
 
   //css constants
   --section-width: 1440px;
@@ -57,11 +60,15 @@ a {
   &:hover {
     * {
       transition: all 0.3s ease-in-out;
-      color: var(--color-primary) !important;
+      color: var(--color-primary);
     }
   }
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+:global(.curveWrapper) {
+  align-items: center;
 }

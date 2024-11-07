@@ -1,0 +1,121 @@
+.button {
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
+  @include semibold;
+  border: 1px solid var(--color-primary);
+  min-height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-offwhite);
+  padding: 0 38px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  gap: 12px;
+
+  &:hover {
+    background-color: var(--color-offwhite);
+    color: var(--color-primary);
+
+    svg path {
+      stroke: var(--color-primary);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--color-primary);
+  }
+
+  svg path {
+    stroke: var(--color-offwhite);
+  }
+
+  @include tablet {
+    padding: 0 22px;
+    font-size: 14px;
+    min-height: 48px;
+  }
+
+  &.white {
+    background-color: var(--color-offwhite);
+    color: var(--color-primary);
+    border: 1px solid var(--color-offwhite);
+
+    svg path {
+      stroke: var(--color-primary);
+    }
+    &:hover {
+      background-color: transparent;
+      color: var(--color-offwhite);
+
+      svg path {
+        stroke: var(--color-offwhite);
+      }
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: var(--color-primary);
+
+    svg path {
+      stroke: var(--color-primary);
+    }
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-offwhite);
+
+      svg path {
+        stroke: var(--color-offwhite);
+      }
+    }
+  }
+  &.outlinedWhite {
+    border: 1px solid var(--color-offwhite);
+    color: var(--color-offwhite);
+    background-color: transparent;
+
+    svg path {
+      stroke: var(--color-offwhite);
+    }
+
+    &:hover {
+      background-color: var(--color-offwhite);
+      color: var(--color-primary);
+
+      svg path {
+        stroke: var(--color-primary);
+      }
+    }
+  }
+  &.outlinedBlack {
+    background-color: transparent;
+    border: 1px solid var(--neutral-900);
+    color: var(--neutral-900);
+
+    svg path {
+      stroke: var(--neutral-900);
+    }
+    &:hover {
+      background-color: var(--neutral-900);
+      color: var(--color-offwhite);
+
+      svg path {
+        stroke: var(--color-offwhite);
+      }
+    }
+  }
+}
+.singleBorder {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+svg {
+  min-width: 16px;
+}

@@ -1,0 +1,17 @@
+.slider {
+  width: 428px !important;
+  @include tablet {
+    width: 300px !important;
+  }
+}
+.blockSwiperContainer {
+  position: relative;
+}
+.swiper {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  @include tablet {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}

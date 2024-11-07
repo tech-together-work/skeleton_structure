@@ -1,0 +1,14 @@
+.statesSlider {
+  .heading {
+    h2 {
+      max-width: 500px;
+      color: var(--color-offwhite);
+    }
+  }
+  .buttonWrap {
+    margin-top: 72px;
+    @include tablet {
+      margin-top: 42px;
+    }
+  }
+}

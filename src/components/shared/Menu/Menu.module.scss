@@ -1,0 +1,28 @@
+.wrap,
+.holiday,
+.destination {
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+.holiday:hover .holidayDrop,
+.destination:hover .destinationDrop {
+  opacity: 1;
+  z-index: 9;
+  pointer-events: auto;
+}
+.holidayDrop,
+.destinationDrop {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: max-content;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+}
+.wrap {
+  height: 100%;
+}

@@ -1,0 +1,96 @@
+.blogCard {
+  border: 2px solid var(--color-primary);
+  .imageWrap {
+    min-height: 427px;
+    width: 100%;
+    @include laptop {
+      min-height: 300px;
+      max-height: 300px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .contentWrap {
+    padding: 40px 24px 34px 24px;
+    position: relative;
+    gap: 16px !important;
+    height: 100%;
+
+    @include tablet {
+      padding: 32px 24px;
+      height: auto;
+      gap: 0 !important;
+    }
+
+    h4 {
+      @include tablet {
+        font-size: 28px !important;
+        @include medium;
+      }
+    }
+
+    p {
+      margin-top: 16px;
+      margin-bottom: 32px;
+      max-width: 487px;
+      line-height: 24px;
+      @include tablet {
+        margin-bottom: 16px;
+        font-size: 12px;
+        line-height: 16.8px;
+      }
+    }
+
+    .readMore {
+      padding: 0 8px;
+      min-height: 32px;
+      position: absolute;
+      bottom: 34px;
+      left: 24px;
+      font-size: 18px !important;
+      line-height: normal;
+
+      @include laptop {
+        position: relative;
+        bottom: initial;
+        left: initial;
+        font-size: 12px !important;
+      }
+    }
+  }
+  &.row {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+
+    @include laptop {
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+    }
+
+    > div {
+      flex: 1;
+      @include laptop {
+        flex: initial;
+      }
+    }
+
+    .imageWrap {
+      height: 342px;
+      min-height: 342px;
+      max-width: 321px;
+      @include laptop {
+        min-height: 300px;
+        minax-height: 300px;
+        max-width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
