@@ -13,10 +13,16 @@
   h6 {
     line-height: 28px;
   }
+  p {
+    color: var(--neutral-300) !important;
+  }
   &:hover {
     background-color: var(--color-primary-light);
     .icon {
       color: var(--color-primary);
+    }
+    p {
+      color: var(--neutral-300) !important;
     }
   }
 }
