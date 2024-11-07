@@ -1,0 +1,18 @@
+.wrapper {
+  background-color: var(--color-secondary);
+  padding: 48px 64px;
+
+  @include tablet {
+    padding: 48px 32px;
+  }
+
+  .form {
+    flex-wrap: wrap !important;
+    @include laptop {
+      flex-direction: column !important;
+    }
+    > div {
+      flex: 1;
+    }
+  }
+}
