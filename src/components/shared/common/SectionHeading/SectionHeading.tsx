@@ -13,7 +13,6 @@ interface Props {
 }
 const SectionHeading: React.FC<Props> = ({
   className,
-  stars,
   children,
   isBrown = false,
 }) => {

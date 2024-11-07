@@ -1,4 +1,4 @@
-import { H4, H6 } from '../../../Text/Text';
+import { H4 } from '../../../Text/Text';
 import styles from './Card.module.scss';
 import dummyImage from '../../../../../assets/images/banner.png';
 import { Link } from 'react-router-dom';

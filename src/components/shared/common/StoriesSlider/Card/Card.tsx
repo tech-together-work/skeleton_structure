@@ -1,4 +1,4 @@
-import { H4, H5, H6, Text } from '../../../Text/Text';
+import { H5, Text } from '../../../Text/Text';
 import styles from './Card.module.scss';
 import dummyImage from '../../../../../assets/images/banner.png';
 import Flex from '../../../Flex/Flex';
