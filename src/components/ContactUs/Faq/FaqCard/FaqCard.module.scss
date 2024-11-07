@@ -1,0 +1,56 @@
+.accordionItem {
+  padding: 24px 50px;
+  max-width: 1080px;
+  margin: 0 auto;
+  cursor: pointer;
+  @include tablet {
+    padding: 24px 16px;
+  }
+  .accordionContent {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+
+    &.open {
+      height: max-content;
+      overflow: auto;
+      padding-top: 24px;
+      opacity: 1;
+
+      @include tablet {
+        padding-top: 8px;
+      }
+    }
+  }
+}
+h5,
+p {
+  @include tablet {
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+h5 {
+  display: flex;
+  align-items: center;
+}
+.accordionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon {
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    transform: rotate(-180deg);
+  }
+}

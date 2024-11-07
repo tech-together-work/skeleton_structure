@@ -1,0 +1,6 @@
+.list {
+  padding-top: 48px;
+  @include tablet {
+    padding-top: 0;
+  }
+}

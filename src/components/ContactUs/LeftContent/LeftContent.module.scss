@@ -1,0 +1,43 @@
+.content {
+  color: var(--color-offwhite);
+
+  .heading {
+    @include laptop {
+      font-size: 32px !important;
+      line-height: 41.6px;
+    }
+  }
+  .contactText {
+    margin-top: 24px;
+    line-height: 28px;
+    max-width: 480px;
+    @include laptop {
+      font-size: 16px !important;
+      line-height: 22px;
+      margin-top: 12px;
+    }
+  }
+
+  .bottom {
+    margin-top: 120px;
+    flex-wrap: wrap !important;
+    @include smallDesktop {
+      margin-top: 40px;
+      gap: 40px !important;
+    }
+
+    .part {
+      max-width: 265px;
+      @include laptop {
+        gap: 8px !important;
+      }
+      h6 {
+        line-height: 28px;
+        @include laptop {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
