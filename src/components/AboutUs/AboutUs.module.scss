@@ -1,0 +1,13 @@
+.visionariesContainer {
+  background-color: var(--color-secondary);
+}
+hr {
+  height: 2px;
+  width: 100%;
+  border: none;
+  background-color: var(--color-primary);
+
+  @include tablet {
+    margin-top: -112px;
+  }
+}

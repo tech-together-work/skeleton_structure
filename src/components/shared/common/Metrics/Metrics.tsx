@@ -1,7 +1,7 @@
-import Star from '../../../assets/icons/Star';
-import { ColorsEnum } from '../../../enums/ColorsEnum';
-import Flex from '../../shared/Flex/Flex';
-import { H5, Text } from '../../shared/Text/Text';
+import Star from '../../../../assets/icons/Star';
+import { ColorsEnum } from '../../../../enums/ColorsEnum';
+import Flex from '../../Flex/Flex';
+import { H5, Text } from '../../Text/Text';
 import styles from './Metrics.module.scss';
 
 const Metrics = () => {

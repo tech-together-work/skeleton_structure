@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import ChevronDown from '../../../../assets/icons/ChevronDown';
 import { ColorsEnum } from '../../../../enums/ColorsEnum';
 import Flex from '../../Flex/Flex';
@@ -10,9 +9,9 @@ interface Props {
   href?: string;
   className?: string;
 }
-const MenuItem: React.FC<Props> = ({ name, className, href }) => {
+const MenuItem: React.FC<Props> = ({ name, className }) => {
   return (
-    <Link to={href ? href : ''} className={className}>
+    <Flex alignItems="center" className={className}>
       <Flex
         alignItems="center"
         gap="6px"
@@ -22,7 +21,7 @@ const MenuItem: React.FC<Props> = ({ name, className, href }) => {
         <P>{name}</P>
         <ChevronDown />
       </Flex>
-    </Link>
+    </Flex>
   );
 };
 

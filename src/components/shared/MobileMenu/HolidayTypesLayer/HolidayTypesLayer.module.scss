@@ -1,0 +1,27 @@
+.holidayLayer {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  .back {
+    padding: 0 16px;
+    padding-top: 24px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-offwhite);
+    padding-bottom: 4px;
+    svg {
+      transform: rotate(90deg);
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .list {
+    padding: 16px;
+    a {
+      width: 100%;
+      > div {
+        min-width: 100%;
+      }
+    }
+  }
+}
