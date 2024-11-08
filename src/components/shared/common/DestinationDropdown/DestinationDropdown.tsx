@@ -7,15 +7,11 @@ import { ColorsEnum } from '../../../../enums/ColorsEnum';
 import Country from './Country/Country';
 import State from './State/State';
 import { useState } from 'react';
-import { useGetCountries } from '../../../../hooks/useGetCountries';
 
 interface Props {
   className?: string;
 }
 const DestinationDropdown: React.FC<Props> = ({ className }) => {
-  const { data } = useGetCountries();
-  console.log('-=-==-=counties', data);
-
   const arr = [
     { name: 'India', state: [1, 2, 3, 4, 5, 6, 7, 8] },
     { name: 'America', state: [1, 2] },
