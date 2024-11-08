@@ -6,8 +6,9 @@ import ErrorTemplate from './components/shared/Error/Error';
 const router = createBrowserRouter([
   {
     element: <PageLayout />,
-    children: routes,
+    path: '/',
     errorElement: <ErrorTemplate />,
+    children: routes,
   },
 ]);
 const App = () => {
