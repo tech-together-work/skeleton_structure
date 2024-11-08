@@ -56,7 +56,7 @@ const DestinationLayer: React.FC<Props> = ({ onBack }) => {
                 href={country.slug}
                 description={country.description}
                 name={country.title}
-                imageUrl={country.image}
+                image={country.image}
                 key={index}
               />
               <ChevronDown />
