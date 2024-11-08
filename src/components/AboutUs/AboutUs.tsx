@@ -14,7 +14,6 @@ import {
   getCities,
   getStateList,
 } from '../../sanity/index';
-import { getImageUrl } from '../../sanity/helper';
 import { Post } from '../../sanity/types/post';
 import { useEffect, useState } from 'react';
 
@@ -38,6 +37,7 @@ const AboutUs = () => {
     };
     fetchPost();
   }, []);
+  console.log('posts', posts);
 
   return (
     <div className={styles.about}>
