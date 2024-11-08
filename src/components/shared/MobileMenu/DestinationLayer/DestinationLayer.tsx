@@ -7,16 +7,16 @@ import { P } from '../../Text/Text';
 import styles from './DestinationLayer.module.scss';
 import State from '../../common/DestinationDropdown/State/State';
 import clsx from 'clsx';
+import { useCache } from '../../../../hooks/useCache';
+import { APIKeysEnum } from '../../../../enums/APIKeysEnum';
+import { Country as CountryType } from '../../../../sanity/types/country';
+import NoDataFound from '../../common/NoDataFound/NoDataFound';
 
 interface Props {
   onBack?: () => void;
 }
 const DestinationLayer: React.FC<Props> = ({ onBack }) => {
-  const arr = [
-    { name: 'India', state: [1, 2, 3, 4, 5, 6, 7, 8] },
-    { name: 'America', state: [1, 2] },
-    { name: 'China', state: [1, 2, 3, 4, 5] },
-  ];
+  const countriesStates = useCache<CountryType[]>(APIKeysEnum.COUNTRIES);
   const [selectedCountry, setSelectedCountry] = useState<number | undefined>();
 
   const handleCountrySelect = (index: number) => {
@@ -25,7 +25,9 @@ const DestinationLayer: React.FC<Props> = ({ onBack }) => {
 
   const stateList =
     selectedCountry !== undefined &&
-    arr[selectedCountry]?.state.map((_: any, index) => <State key={index} />);
+    countriesStates?.[selectedCountry]?.states?.map((state, index) => (
+      <State title={state.title} href={state.slug} key={index} />
+    ));
 
   return (
     <div className={styles.destinationLayer}>
@@ -40,7 +42,7 @@ const DestinationLayer: React.FC<Props> = ({ onBack }) => {
           Destination
         </P>
       </Flex>
-      {arr.map((country, index) => {
+      {countriesStates?.map((country, index) => {
         return (
           <div
             key={index}
@@ -50,10 +52,18 @@ const DestinationLayer: React.FC<Props> = ({ onBack }) => {
             )}
           >
             <div onClick={() => handleCountrySelect(index)}>
-              <Country name={country.name} key={index} />
+              <Country
+                href={country.slug}
+                description={country.description}
+                name={country.title}
+                imageUrl={country.image}
+                key={index}
+              />
               <ChevronDown />
             </div>
-            <ul className={clsx(styles.statesWrap)}>{stateList}</ul>
+            <ul className={clsx(styles.statesWrap)}>
+              {stateList ? stateList : <NoDataFound />}
+            </ul>
           </div>
         );
       })}

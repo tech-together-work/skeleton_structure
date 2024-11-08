@@ -3,9 +3,13 @@ import { Text } from '../../../Text/Text';
 import { ColorsEnum } from '../../../../../enums/ColorsEnum';
 import { Link } from 'react-router-dom';
 
-const State = () => {
+interface Props {
+  href?: string;
+  title: string;
+}
+const State: React.FC<Props> = ({ href = '', title }) => {
   return (
-    <Link to={''}>
+    <Link to={href}>
       <Text
         className={styles.text}
         color={ColorsEnum.Neutral900}
@@ -13,7 +17,7 @@ const State = () => {
         fontWeight="semibold"
         variant="li"
       >
-        Kerala
+        {title}
       </Text>
     </Link>
   );
