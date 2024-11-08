@@ -39,7 +39,6 @@ const CurveSlider = () => {
         centeredSlides
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={(swiper) => {
           setActiveIndex(Math.floor(swiper.realIndex % arr.length));
         }}

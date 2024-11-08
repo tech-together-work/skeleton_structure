@@ -17,8 +17,6 @@ const BlockSlider = () => {
         slidesPerView={'auto'}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide className={styles.slider}>
           <Card />
