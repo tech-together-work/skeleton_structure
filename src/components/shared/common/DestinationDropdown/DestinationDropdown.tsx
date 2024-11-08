@@ -40,7 +40,7 @@ const DestinationDropdown: React.FC<Props> = ({ className }) => {
                   href={country.slug}
                   description={country.description}
                   name={country.title}
-                  imageUrl={country.image}
+                  image={country.image}
                   isHovered={hoveredCountry === index}
                 />
               </div>
