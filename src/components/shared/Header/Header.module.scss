@@ -56,6 +56,11 @@
       width: 40px;
     }
   }
+  p {
+    @include laptop {
+      @include semibold;
+    }
+  }
   &:hover p {
     color: initial !important;
   }
