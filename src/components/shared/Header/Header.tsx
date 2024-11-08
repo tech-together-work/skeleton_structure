@@ -54,7 +54,7 @@ const Header = () => {
               <img src={logo} alt="logo" />
               <Text
                 fontSize={26}
-                fontWeight="medium"
+                fontWeight="semibold"
                 color={ColorsEnum.Neutral900}
                 className={styles.logoText}
               >
