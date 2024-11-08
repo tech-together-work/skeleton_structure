@@ -1,4 +1,3 @@
-import { useGetCountryStates } from '../../hooks/useGetCountryStates';
 import Metrics from '../shared/common/Metrics/Metrics';
 import Container from '../shared/Container/Container';
 import Section from '../shared/Section/Section';
@@ -8,7 +7,6 @@ import Block2 from './Block/Block2';
 import Visionaries from './Visionaries/Visionaries';
 
 const AboutUs = () => {
-  const data = useGetCountryStates();
   return (
     <div className={styles.about}>
       <Section>
