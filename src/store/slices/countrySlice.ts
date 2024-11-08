@@ -7,8 +7,8 @@ const countrySlice = createSlice({
   name: 'countries',
   initialState: initialState,
   reducers: {
-    setCountries: (state, action: PayloadAction<Country[]>) => {
-      state = action.payload;
+    setCountries: (_, action: PayloadAction<Country[]>) => {
+      return action.payload;
     },
   },
 });
