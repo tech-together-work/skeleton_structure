@@ -37,7 +37,7 @@ const AboutUs = () => {
     };
     fetchPost();
   }, []);
-  console.log('posts', posts);
+  console.log('Hello posts', posts);
 
   return (
     <div className={styles.about}>
