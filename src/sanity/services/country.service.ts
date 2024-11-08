@@ -7,7 +7,7 @@ import {
 import { Country } from '../types/country';
 
 class CountryService {
-  async getCountries() {
+  async getCountryStates() {
     try {
       return await client.fetch<Country[]>(fetchCountryList);
     } catch (error) {
@@ -17,11 +17,21 @@ class CountryService {
   }
 
   async getAllCountryDetails() {
-    return await client.fetch(fetchAllCountryDetails);
+    try {
+      return await client.fetch(fetchAllCountryDetails);
+    } catch (error) {
+      console.error('Error fetching countries:', error);
+      return [];
+    }
   }
 
   async getCountryByName(slug: string) {
-    return await client.fetch(fetchCountryByName, { slug });
+    try {
+      return await client.fetch(fetchCountryByName, { slug });
+    } catch (error) {
+      console.error('Error fetching countries:', error);
+      return [];
+    }
   }
 }
 

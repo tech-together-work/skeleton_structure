@@ -26,6 +26,14 @@ export const fetchCountryByName = `*[_type == "country" && slug.current == $slug
   }`;
 
 export const fetchCountryList = `*[_type == "country"]{
-    title,
-    "slug": slug.current
-  }`;
+   _id,
+   title,
+   "slug": slug.current,
+   description,
+   image,
+   states[]->{
+     _id,
+     title,
+     "slug": slug.current,
+   }
+ }`;
