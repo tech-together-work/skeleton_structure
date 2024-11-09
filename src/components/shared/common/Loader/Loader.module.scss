@@ -1,0 +1,12 @@
+.loaderWrap {
+  width: 100%;
+  padding: 64px 0;
+
+  p {
+    color: var(--color-primary);
+    @include regular;
+  }
+  @include tablet {
+    padding: 24px 0;
+  }
+}

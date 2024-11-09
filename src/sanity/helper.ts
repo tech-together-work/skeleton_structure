@@ -1,10 +1,11 @@
-// src/sanity/helpers.ts
 import { client } from './client';
 import imageUrlBuilder from '@sanity/image-url';
 
 export function getImageUrl(source: any): string {
+  if (source === null) return '';
   const builder = imageUrlBuilder(client);
-  return builder.image(source).width(300).url();
+
+  return builder.image(source).url();
 }
 
 export function formatDate(dateString: string): string {

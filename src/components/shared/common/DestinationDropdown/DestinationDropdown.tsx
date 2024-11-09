@@ -7,35 +7,40 @@ import { ColorsEnum } from '../../../../enums/ColorsEnum';
 import Country from './Country/Country';
 import State from './State/State';
 import { useState } from 'react';
+import { useCache } from '../../../../hooks/useCache';
+import { APIKeysEnum } from '../../../../enums/APIKeysEnum';
+import { Country as CountryType } from '../../../../sanity/types/country';
+import NoDataFound from '../NoDataFound/NoDataFound';
 
 interface Props {
   className?: string;
 }
 const DestinationDropdown: React.FC<Props> = ({ className }) => {
-  const arr = [
-    { name: 'India', state: [1, 2, 3, 4, 5, 6, 7, 8] },
-    { name: 'America', state: [1, 2] },
-    { name: 'China', state: [1, 2, 3, 4, 5] },
-  ];
+  const countriesStates = useCache<CountryType[]>(APIKeysEnum.COUNTRIES);
   const [hoveredCountry, setHoveredCountry] = useState<number>(0);
 
   const handleCountryHover = (index: number) => {
     setHoveredCountry(index);
   };
 
-  const stateList = arr[hoveredCountry]?.state.map((_: any, index) => (
-    <State key={index} />
-  ));
+  const stateList = countriesStates?.[hoveredCountry]?.states?.map(
+    (state, index) => (
+      <State key={index} title={state.title} href={state.slug} />
+    )
+  );
 
   return (
     <div className={clsx(styles.destinationDrop, className)}>
       <Flex className={styles.wrapper}>
         <Flex className={styles.countries} direction="column" gap="4px">
-          {arr.map((country, index) => {
+          {countriesStates?.map((country, index) => {
             return (
               <div key={index} onMouseEnter={() => handleCountryHover(index)}>
                 <Country
-                  name={country.name}
+                  href={country.slug}
+                  description={country.description}
+                  name={country.title}
+                  image={country.image}
                   isHovered={hoveredCountry === index}
                 />
               </div>
@@ -50,9 +55,11 @@ const DestinationDropdown: React.FC<Props> = ({ className }) => {
               fontSize={18}
               fontWeight="medium"
             >
-              States in {arr[hoveredCountry].name}
+              States in {countriesStates?.[hoveredCountry].title}
             </Text>
-            <ul className={styles.stateList}>{stateList}</ul>
+            <ul className={styles.stateList}>
+              {stateList ? stateList : <NoDataFound />}
+            </ul>
           </Flex>
         </div>
       </Flex>
