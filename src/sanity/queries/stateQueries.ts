@@ -1,8 +1,8 @@
 export const fetchStateDetails = `*[_type == "state"] {
     title,
-      cities[]->{
+      tours[]->{
         title,
-        tourTypes[]->{
+        tours[]->{
           title
         }
       }  
