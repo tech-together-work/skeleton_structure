@@ -1,15 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import Flex from '../Flex/Flex';
 import styles from './Header.module.scss';
-import Menu from '../Menu/Menu';
 import { P, Text } from '../Text/Text';
 import { ColorsEnum } from '../../../enums/ColorsEnum';
 import logo from '../../../assets/images/logo.svg';
 import { RoutesEnum } from '../../../enums/RouteEnums';
 import Button from '../Button/Button';
-import MobileMenu from '../MobileMenu/MobileMenu';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
+import Menu from '../common/Menu/Menu';
+import MobileMenu from '../common/MobileMenu/MobileMenu';
 
 const Header = () => {
   const [hamActive, setHamActive] = useState<boolean>(false);

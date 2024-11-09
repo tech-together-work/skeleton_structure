@@ -1,8 +1,8 @@
-import Flex from '../Flex/Flex';
+import Flex from '../../Flex/Flex';
 import MenuItem from './MenuItem/MenuItem';
-import HolidayTypeDropdown from '../common/HolidayTypeDropdown/HolidayTypeDropdown';
+import HolidayTypeDropdown from '../../common/HolidayTypeDropdown/HolidayTypeDropdown';
 import styles from './Menu.module.scss';
-import DestinationDropdown from '../common/DestinationDropdown/DestinationDropdown';
+import DestinationDropdown from '../../common/DestinationDropdown/DestinationDropdown';
 
 const Menu = () => {
   return (

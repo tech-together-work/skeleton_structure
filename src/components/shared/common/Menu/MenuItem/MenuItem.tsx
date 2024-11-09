@@ -1,7 +1,7 @@
-import ChevronDown from '../../../../assets/icons/ChevronDown';
-import { ColorsEnum } from '../../../../enums/ColorsEnum';
-import Flex from '../../Flex/Flex';
-import { P } from '../../Text/Text';
+import ChevronDown from '../../../../../assets/icons/ChevronDown';
+import { ColorsEnum } from '../../../../../enums/ColorsEnum';
+import Flex from '../../../Flex/Flex';
+import { P } from '../../../Text/Text';
 import styles from './MenuItem.module.scss';
 
 interface Props {

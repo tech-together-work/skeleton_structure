@@ -1,4 +1,4 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import styles from './SingleBlockSlider.module.scss';
 import 'swiper/css';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
@@ -6,11 +6,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import Card from './Card/Card';
+interface Props {
+  children?: React.ReactNode;
+}
 
-const SingleBlockSlider = () => {
+const SingleBlockSlider: React.FC<Props> = ({ children }) => {
   return (
-    <div className={styles.blockSwiperContainer}>
+    <div className={styles.singleBlockSwiperContainer}>
       <Swiper
         wrapperClass="singleWrapper"
         speed={2000}
@@ -28,24 +30,7 @@ const SingleBlockSlider = () => {
           disableOnInteraction: false,
         }}
       >
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
+        {children}
       </Swiper>
     </div>
   );

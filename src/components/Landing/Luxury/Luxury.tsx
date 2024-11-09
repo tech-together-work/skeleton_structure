@@ -7,6 +7,8 @@ import { H2, H6 } from '../../shared/Text/Text';
 import LinkButton from '../../shared/LinkButton/LinkButton';
 import Section from '../../shared/Section/Section';
 import disc from '../../../assets/images/disc2.svg';
+import { SwiperSlide } from 'swiper/react';
+import Card from './Card/Card';
 
 const Luxury = () => {
   return (
@@ -15,7 +17,26 @@ const Luxury = () => {
         Experience Unmatched Luxury Hospitality
       </SectionHeading>
       <Section>
-        <SingleBlockSlider />
+        <SingleBlockSlider>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card />
+          </SwiperSlide>
+        </SingleBlockSlider>
 
         <Flex className={styles.whySwagatam} gap="76px">
           <div className={styles.imageWrap}>

@@ -1,12 +1,15 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import styles from './BlockSlider.module.scss';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
-import Card from './Card/Card';
 import SwiperNav from '../SwiperNav/SwiperNav';
 
-const BlockSlider = () => {
+interface Props {
+  children?: React.ReactNode;
+}
+
+const BlockSlider: React.FC<Props> = ({ children }) => {
   return (
     <div className={styles.blockSwiperContainer}>
       <Swiper
@@ -18,24 +21,7 @@ const BlockSlider = () => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        <SwiperSlide className={styles.slider}>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slider}>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slider}>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slider}>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slider}>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide className={styles.slider}>
-          <Card />
-        </SwiperSlide>
+        {children}
         <SwiperNav />
       </Swiper>
     </div>

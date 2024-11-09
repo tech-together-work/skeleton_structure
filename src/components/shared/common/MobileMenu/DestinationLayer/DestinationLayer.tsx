@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import ChevronDown from '../../../../assets/icons/ChevronDown';
-import { ColorsEnum } from '../../../../enums/ColorsEnum';
-import Country from '../../common/DestinationDropdown/Country/Country';
-import Flex from '../../Flex/Flex';
-import { P } from '../../Text/Text';
+import ChevronDown from '../../../../../assets/icons/ChevronDown';
+import { ColorsEnum } from '../../../../../enums/ColorsEnum';
+import Country from '../../../common/DestinationDropdown/Country/Country';
+import Flex from '../../../Flex/Flex';
+import { P } from '../../../Text/Text';
 import styles from './DestinationLayer.module.scss';
-import State from '../../common/DestinationDropdown/State/State';
+import State from '../../../common/DestinationDropdown/State/State';
 import clsx from 'clsx';
-import { useCache } from '../../../../hooks/useCache';
-import { APIKeysEnum } from '../../../../enums/APIKeysEnum';
-import { Country as CountryType } from '../../../../sanity/types/country';
-import NoDataFound from '../../common/NoDataFound/NoDataFound';
+import { useCache } from '../../../../../hooks/useCache';
+import { APIKeysEnum } from '../../../../../enums/APIKeysEnum';
+import { Country as CountryType } from '../../../../../sanity/types/country';
+import NoDataFound from '../../../common/NoDataFound/NoDataFound';
 
 interface Props {
   onBack?: () => void;
@@ -26,7 +26,12 @@ const DestinationLayer: React.FC<Props> = ({ onBack }) => {
   const stateList =
     selectedCountry !== undefined &&
     countriesStates?.[selectedCountry]?.states?.map((state, index) => (
-      <State title={state.title} href={state.slug} key={index} />
+      <State
+        destinationSlug={countriesStates?.[selectedCountry].slug}
+        title={state.title}
+        href={state.slug}
+        key={index}
+      />
     ));
 
   return (

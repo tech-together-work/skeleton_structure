@@ -1,6 +1,6 @@
-import { H3, H6 } from '../../../Text/Text';
+import { H3, H6 } from '../../../shared/Text/Text';
 import styles from './Card.module.scss';
-import dummyImage from '../../../../../assets/images/banner.png';
+import dummyImage from '../../../../assets/images/banner.png';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 

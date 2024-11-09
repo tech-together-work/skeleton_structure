@@ -5,3 +5,9 @@
     }
   }
 }
+.slider {
+  width: 428px !important;
+  @include tablet {
+    width: 300px !important;
+  }
+}

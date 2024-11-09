@@ -27,7 +27,7 @@ const Country: React.FC<Props> = ({
         <img src={image ? getImageUrl(image) : ''} alt="image" />
       </div>
       <Flex direction="column">
-        <Link to={href}>
+        <Link to={`/destination/${href}`}>
           <H6 fontWeight="semibold">{name}</H6>
         </Link>
 

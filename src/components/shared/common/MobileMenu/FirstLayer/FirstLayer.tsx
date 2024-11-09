@@ -1,12 +1,12 @@
 import styles from './FirstLayer.module.scss';
-import Flex from '../../Flex/Flex';
-import { ColorsEnum } from '../../../../enums/ColorsEnum';
-import ChevronDown from '../../../../assets/icons/ChevronDown';
+import Flex from '../../../Flex/Flex';
+import { ColorsEnum } from '../../../../../enums/ColorsEnum';
+import ChevronDown from '../../../../../assets/icons/ChevronDown';
 import { Link, useLocation } from 'react-router-dom';
-import { Text } from '../../Text/Text';
-import { RoutesEnum } from '../../../../enums/RouteEnums';
+import { Text } from '../../../Text/Text';
+import { RoutesEnum } from '../../../../../enums/RouteEnums';
 import clsx from 'clsx';
-import Button from '../../Button/Button';
+import Button from '../../../Button/Button';
 
 interface Props {
   onClick: (type: string) => void;

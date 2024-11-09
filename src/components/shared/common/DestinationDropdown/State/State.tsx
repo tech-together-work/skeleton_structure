@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 interface Props {
   href?: string;
   title: string;
+  destinationSlug: string;
 }
-const State: React.FC<Props> = ({ href = '', title }) => {
+const State: React.FC<Props> = ({ href = '', title, destinationSlug }) => {
   return (
-    <Link to={href}>
+    <Link to={`/destination/${destinationSlug}/${href}`}>
       <Text
         className={styles.text}
         color={ColorsEnum.Neutral900}

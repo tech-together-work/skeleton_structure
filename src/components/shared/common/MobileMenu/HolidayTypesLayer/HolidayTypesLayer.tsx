@@ -1,9 +1,9 @@
-import ChevronDown from '../../../../assets/icons/ChevronDown';
-import { ColorsEnum } from '../../../../enums/ColorsEnum';
-import { HolidayTypeEnum } from '../../../../enums/HolidayTypeEnum';
-import Item from '../../common/HolidayTypeDropdown/Item/Item';
-import Flex from '../../Flex/Flex';
-import { P } from '../../Text/Text';
+import ChevronDown from '../../../../../assets/icons/ChevronDown';
+import { ColorsEnum } from '../../../../../enums/ColorsEnum';
+import { HolidayTypeEnum } from '../../../../../enums/HolidayTypeEnum';
+import Item from '../../../common/HolidayTypeDropdown/Item/Item';
+import Flex from '../../../Flex/Flex';
+import { P } from '../../../Text/Text';
 import styles from './HolidayTypesLayer.module.scss';
 
 interface Props {

@@ -10,7 +10,7 @@ import Partners from './Partners/Partners';
 import Awards from './Awards/Awards';
 import Blogs from './Blogs/Blogs';
 import HolidayTypes from './HolidayTypes/HolidayTypes';
-import StatesSlider from './StatesSlider/StatesSlider';
+import DestinationSlider from './StatesSlider/DestinationSlider';
 import Luxury from './Luxury/Luxury';
 import NotSureTour from '../shared/common/NotSureTour/NotSureTour';
 import TripStories from './TripStories/TripStories';
@@ -30,7 +30,7 @@ const Landing = () => {
         <Metrics />
       </Section>
       <Container className={styles.statesSlider}>
-        <StatesSlider />
+        <DestinationSlider />
       </Container>
       <Container spacing={false}>
         <SmallBanner />

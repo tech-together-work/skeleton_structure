@@ -1,17 +1,17 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import styles from './CurveSlider.module.scss';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
-import Card from './Card/Card';
 import SwiperNav from '../SwiperNav/SwiperNav';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-const CurveSlider = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const arr = ['1', '2', '3', '4'];
-  console.log(activeIndex);
-
+interface Props {
+  children?: React.ReactNode;
+  setActiveIndex?: (index: number) => void;
+  data: any;
+}
+const CurveSlider: React.FC<Props> = ({ children, setActiveIndex, data }) => {
   useEffect(() => {}, []);
   return (
     <div className={styles.curveSliderContainer}>
@@ -40,16 +40,12 @@ const CurveSlider = () => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSlideChange={(swiper) => {
-          setActiveIndex(Math.floor(swiper.realIndex % arr.length));
+          setActiveIndex
+            ? setActiveIndex(Math.floor(swiper.realIndex % data.length))
+            : '';
         }}
       >
-        {arr.map((_, index) => {
-          return (
-            <SwiperSlide key={index} className={styles.slider}>
-              <Card isActive={index === activeIndex} />
-            </SwiperSlide>
-          );
-        })}
+        {children}
         <SwiperNav />
       </Swiper>
     </div>

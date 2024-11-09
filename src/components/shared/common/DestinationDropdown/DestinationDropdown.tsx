@@ -25,7 +25,12 @@ const DestinationDropdown: React.FC<Props> = ({ className }) => {
 
   const stateList = countriesStates?.[hoveredCountry]?.states?.map(
     (state, index) => (
-      <State key={index} title={state.title} href={state.slug} />
+      <State
+        destinationSlug={countriesStates?.[hoveredCountry].slug}
+        key={index}
+        title={state.title}
+        href={state.slug}
+      />
     )
   );
 
