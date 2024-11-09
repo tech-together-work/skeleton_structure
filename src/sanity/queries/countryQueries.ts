@@ -25,7 +25,7 @@ export const fetchCountryByName = `*[_type == "country" && slug.current == $slug
     }
   }`;
 
-export const fetchCountryList = `*[_type == "country" | order(order asc)]{
+export const fetchCountryList = `*[_type == "country"]{
    _id,
    title,
    "slug": slug.current,
@@ -37,4 +37,4 @@ export const fetchCountryList = `*[_type == "country" | order(order asc)]{
      title,
      "slug": slug.current,
    }
- }`;
+ } | order(order asc)`;

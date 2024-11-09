@@ -2,11 +2,13 @@ import { State } from './state';
 
 export interface Country {
   _id: string;
+  title: string;
+  slug: string;
   description: string;
   image: null | Image;
-  slug: string;
+  order: number;
   states: State[] | null;
-  title: string;
+  
 }
 
 export interface Image {
