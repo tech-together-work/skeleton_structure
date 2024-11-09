@@ -1,4 +1,5 @@
 import { State } from './state';
+import { Image } from './common';
 
 export interface Country {
   _id: string;
@@ -8,12 +9,4 @@ export interface Country {
   image: null | Image;
   order: number;
   states: State[] | null;
-  
-}
-
-export interface Image {
-  asset: {
-    _ref: string;
-    _type: string;
-  };
 }

@@ -1,6 +1,6 @@
 import { APIKeysEnum } from '../enums/APIKeysEnum';
 import { countryService } from '../sanity';
-import { useQuery } from 'react-query';
+import { useCustomQuery } from './useCustomQuery';
 
 export const getCountries = async () => {
   const data = await countryService.getCountryStates();
@@ -8,11 +8,8 @@ export const getCountries = async () => {
 };
 
 export const useGetCountryStates = () => {
-  const query = useQuery({
-    //Key by which data will be saved into React query cache
-    queryKey: [APIKeysEnum.COUNTRIES],
-    queryFn: getCountries,
+  return useCustomQuery([APIKeysEnum.COUNTRIES], () => getCountries(), {
+    onErrorMessage: 'Error counttry tour',
+    onSuccessMessage: `Fetching Country States API Failed`,
   });
-
-  return query;
 };

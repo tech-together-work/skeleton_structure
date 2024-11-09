@@ -1,6 +1,6 @@
 import { APIKeysEnum } from '../enums/APIKeysEnum';
 import { cityService } from '../sanity';
-import { useQuery } from 'react-query';
+import { useCustomQuery } from './useCustomQuery';
 
 export const getTourByName = async (tourName: string) => {
   const data = await cityService.getTourByName(tourName);
@@ -8,20 +8,12 @@ export const getTourByName = async (tourName: string) => {
 };
 
 export const useGetTourByName = (tourName: string) => {
-  const query = useQuery(
+  return useCustomQuery(
     [APIKeysEnum.TOUR, tourName],
     () => getTourByName(tourName),
     {
-      onError: (error) => {
-        console.error('Error fetching tour:', error);
-      },
-      onSuccess: (data) => {
-        if (!data || data.length === 0) {
-          throw new Error(`No tour found with the slug: ${tourName}`);
-        }
-      },
+      onErrorMessage: 'Error fetching tour',
+      onSuccessMessage: `Fetching Tour API for '${tourName}' Failed`,
     }
   );
-
-  return query;
 };

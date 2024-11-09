@@ -10,13 +10,14 @@ const router = createBrowserRouter([
   {
     element: <PageLayout />,
     path: '/',
-    errorElement: <ErrorTemplate />,
+    errorElement: (
+      <ErrorTemplate error={{ errorText: '', errorStatus: undefined }} />
+    ),
     children: routes,
   },
 ]);
 const App = () => {
   const { isLoading: countriesStatesLoading } = useGetCountryStates();
-
   if (countriesStatesLoading) return <Loader />;
 
   return <RouterProvider router={router} />;

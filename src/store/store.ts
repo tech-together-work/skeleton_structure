@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import countryReducer from './slices/countrySlice';
+import errorReducer from './slices/errorSlice';
 
 const store = configureStore({
   reducer: {
-    countries: countryReducer,
+    error: errorReducer,
   },
 });
 

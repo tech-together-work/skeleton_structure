@@ -4,7 +4,7 @@ import Flex from '../../../Flex/Flex';
 import { H6, P } from '../../../Text/Text';
 import styles from './Country.module.scss';
 import clsx from 'clsx';
-import { Image } from '../../../../../sanity/types/country';
+import { Image } from '../../../../../sanity/types/common';
 import { getImageUrl } from '../../../../../sanity/helper';
 
 interface Props {
