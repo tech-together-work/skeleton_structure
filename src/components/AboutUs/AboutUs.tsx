@@ -8,8 +8,11 @@ import Block2 from './Block/Block2';
 import Visionaries from './Visionaries/Visionaries';
 
 const AboutUs = () => {
-  const { data } = useGetTourByName('kovalam');
+  const { data, refetch } = useGetTourByName('kovalam');
   console.log('=====ABOUT data=====', data);
+  if (data?.length === 0) {
+    refetch();
+  }
   return (
     <div className={styles.about}>
       <Section>
